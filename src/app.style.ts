@@ -16,6 +16,7 @@ export const Aside = styled.div`
   padding: 12px;
   border-right: 1px solid #e5e5e5;
   width: 200px;
+  flex-shrink: 0;
 `
 
 export const Content = styled.div`
