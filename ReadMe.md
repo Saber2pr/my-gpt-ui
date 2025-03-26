@@ -1,6 +1,11 @@
 ### 我的 GPT UI
 
-理解和熟悉 assistant-ui。
+理解和熟悉 assistant-ui。或快速定制你的 Gpt UI 可使用本模版。
+
+### 预览
+
+![img1](./assets/example1.png)
+![img2](./assets/example2.png)
 
 ### 开始
 
