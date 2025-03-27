@@ -2,7 +2,7 @@ import type { FC } from 'react'
 import { Button } from 'antd'
 import React, { useEffect } from 'react'
 
-import { DeleteOutlined, PlusOutlined as PlusIcon } from '@ant-design/icons'
+import { DeleteOutlined, PlusOutlined } from '@ant-design/icons'
 import {
   ThreadListItemPrimitive,
   ThreadListPrimitive,
@@ -31,7 +31,7 @@ const ThreadListNew: FC = () => {
   return (
     <ThreadListPrimitive.New asChild>
       <Button type="ghost">
-        <PlusIcon />
+        <PlusOutlined />
         开启新对话
       </Button>
     </ThreadListPrimitive.New>
