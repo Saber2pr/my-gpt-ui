@@ -32,7 +32,7 @@ export const MyModelAdapterStream: ChatModelAdapter = {
           if (type === 'complete') {
             Dispatcher.instance.dispatch(EVENT_THREAD_SET_TITLE, {
               id: lastItem.id,
-              data: data.slice(0, 10),
+              data: data.slice(0, 20),
             })
           }
         },

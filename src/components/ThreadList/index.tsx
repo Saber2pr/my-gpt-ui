@@ -47,7 +47,7 @@ const ThreadListItem: FC = () => {
   return (
     <ThreadListItemPrimitive.Root
       className="ant-btn"
-      style={{ marginTop: '16px' }}
+      style={{ marginTop: '16px', display: 'flex', alignItems: 'center' }}
     >
       <ThreadListItemPrimitive.Trigger
         style={{
@@ -55,6 +55,10 @@ const ThreadListItem: FC = () => {
           padding: 0,
           background: 'transparent',
           marginRight: '20px',
+          width: '100px',
+          overflow: 'hidden',
+          textOverflow: 'ellipsis',
+          display: 'block',
         }}
       >
         <ThreadListItemTitle />

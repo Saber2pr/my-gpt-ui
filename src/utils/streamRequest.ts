@@ -63,8 +63,10 @@ export async function* streamRequest(
       }
       chunks = ''
     } catch (error) {
+      // 点击了取消
       console.error('Stream reading error:', error)
       if (error?.name === 'AbortError') {
+        options.signal && options.signal.throwIfAborted()
         options.onChange && options.onChange('incomplete', reasonContent)
         yield {
           status: {

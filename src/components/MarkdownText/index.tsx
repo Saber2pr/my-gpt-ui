@@ -13,23 +13,6 @@ const MarkdownTextImpl = (props: TextContentPartProps) => {
   const type = props?.status?.type
   const text = props?.text
 
-  if (type === 'incomplete') {
-    const reason = props?.status?.reason
-    if (reason === 'cancelled') {
-      return (
-        <Skeleton.Node
-          style={{
-            width: 100,
-            borderRadius: 14,
-            height: '38px',
-          }}
-        >
-          失败：{reason}
-        </Skeleton.Node>
-      )
-    }
-  }
-
   if (type === 'running' && !text) {
     return (
       <Skeleton.Node
