@@ -1,9 +1,12 @@
-import { parseStreamData } from './parseStreamData'
 import { ChatModelRunResult } from '@assistant-ui/react'
+
+import { parseStreamData } from './parseStreamData'
 
 export async function* streamRequest(
   url: string,
-  options: RequestInit,
+  options: RequestInit & {
+    onChange?(type: 'complete' | 'running' | 'incomplete', data: string): void
+  },
 ): AsyncGenerator<ChatModelRunResult> {
   const result = await fetch(url, options)
   const reader = result.body.getReader()
@@ -17,6 +20,7 @@ export async function* streamRequest(
       const { done, value } = await reader.read()
       // 流读取完成
       if (done) {
+        options.onChange && options.onChange('complete', currentContent)
         yield {
           status: {
             type: 'complete',
@@ -43,6 +47,7 @@ export async function* streamRequest(
           currentContent += content || ''
           reasonContent += reasoning_content || ''
 
+          options.onChange && options.onChange('running', currentContent)
           yield {
             status: {
               type: 'running',
@@ -60,6 +65,7 @@ export async function* streamRequest(
     } catch (error) {
       console.error('Stream reading error:', error)
       if (error?.name === 'AbortError') {
+        options.onChange && options.onChange('incomplete', reasonContent)
         yield {
           status: {
             type: 'incomplete',

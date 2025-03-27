@@ -1,15 +1,15 @@
 import type { FC } from 'react'
 import { Button } from 'antd'
-import React from 'react'
+import React, { useEffect } from 'react'
 
-import {
-  BookOutlined as ArchiveIcon,
-  PlusOutlined as PlusIcon,
-} from '@ant-design/icons'
+import { DeleteOutlined, PlusOutlined as PlusIcon } from '@ant-design/icons'
 import {
   ThreadListItemPrimitive,
   ThreadListPrimitive,
+  useThreadListItemRuntime,
 } from '@assistant-ui/react'
+import { Dispatcher } from '@/utils/event'
+import { EVENT_THREAD_SET_TITLE } from '@/constants'
 
 // 聊天列表
 export const ThreadList: FC = () => {
@@ -43,9 +43,12 @@ const ThreadListItems: FC = () => {
   return <ThreadListPrimitive.Items components={{ ThreadListItem }} />
 }
 
-const ThreadListItem: FC = (props) => {
+const ThreadListItem: FC = () => {
   return (
-    <div className="ant-btn" style={{ marginTop: '16px' }}>
+    <ThreadListItemPrimitive.Root
+      className="ant-btn"
+      style={{ marginTop: '16px' }}
+    >
       <ThreadListItemPrimitive.Trigger
         style={{
           border: 'none',
@@ -56,21 +59,34 @@ const ThreadListItem: FC = (props) => {
       >
         <ThreadListItemTitle />
       </ThreadListItemPrimitive.Trigger>
-      <ThreadListItemArchive />
-    </div>
+      <ThreadListItemDelete />
+    </ThreadListItemPrimitive.Root>
   )
 }
 
 // 点击切换聊天
 const ThreadListItemTitle: FC = () => {
+  const runtime = useThreadListItemRuntime()
+  useEffect(() => {
+    const handle = (event: { id: string; data: string }) => {
+      const state = runtime.getState()
+      if (state.isMain) {
+        runtime.rename(event.data)
+      }
+    }
+    Dispatcher.instance.addEventListener(EVENT_THREAD_SET_TITLE, handle)
+    return () => {
+      Dispatcher.instance.removeEventListener(EVENT_THREAD_SET_TITLE, handle)
+    }
+  }, [runtime])
   return <ThreadListItemPrimitive.Title fallback={<div>新对话</div>} />
 }
 
 // 归档按钮
-const ThreadListItemArchive: FC = () => {
+const ThreadListItemDelete: FC = () => {
   return (
-    <ThreadListItemPrimitive.Archive asChild>
-      <ArchiveIcon />
-    </ThreadListItemPrimitive.Archive>
+    <ThreadListItemPrimitive.Delete asChild>
+      <DeleteOutlined />
+    </ThreadListItemPrimitive.Delete>
   )
 }

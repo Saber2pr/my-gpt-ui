@@ -1,6 +1,11 @@
-import React from 'react'
-import { AssistantRuntimeProvider, useLocalRuntime } from '@assistant-ui/react'
-import { MyModelAdapter } from './myModelAdapter'
+import React, { useEffect } from 'react'
+
+import {
+  AssistantRuntimeProvider,
+  useLocalRuntime,
+  useThreadListItemRuntime,
+} from '@assistant-ui/react'
+
 import { MyModelAdapterStream } from './myModelAdapterStream'
 
 export interface MyRuntimeProviderProps {
