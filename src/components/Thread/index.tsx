@@ -11,6 +11,8 @@ import {
   RightOutlined,
   SendOutlined,
   StopOutlined,
+  PauseCircleOutlined,
+  PlayCircleOutlined,
 } from '@ant-design/icons'
 import {
   ActionBarPrimitive,
@@ -312,6 +314,16 @@ const AssistantActionBar: FC = () => {
         <ActionBarPrimitive.Reload asChild>
           <RedoOutlined />
         </ActionBarPrimitive.Reload>
+        <MessagePrimitive.If speaking>
+          <ActionBarPrimitive.StopSpeaking asChild>
+            <PauseCircleOutlined />
+          </ActionBarPrimitive.StopSpeaking>
+        </MessagePrimitive.If>
+        <MessagePrimitive.If speaking={false}>
+          <ActionBarPrimitive.Speak asChild>
+            <PlayCircleOutlined />
+          </ActionBarPrimitive.Speak>
+        </MessagePrimitive.If>
       </Space>
     </ActionBarPrimitive.Root>
   )
