@@ -9,6 +9,7 @@ export interface MyRuntimeProviderProps {
 
 export function MyRuntimeProvider({ children }: MyRuntimeProviderProps) {
   // 使用自定义的 ai 接口请求
+  // const runtime = useLocalRuntime(MyModelAdapter)
   const runtime = useLocalRuntime(MyModelAdapterStream)
 
   return (

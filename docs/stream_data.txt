@@ -1,0 +1,930 @@
+event: init
+data: {"event": "init", "chat_id": "fb9b01ae-0c51-4e7e-8d8f-cbebff0a1e8a", "message_id": "3e56b422-9019-491d-965e-322398c2f8cc", "app_id": "d9ee1120-a772-4fe8-9f22-8da6e86f660d", "workflow_id": "5a535e62-7bcb-42d8-b826-423caa3d4148"}
+
+event: flowNodeStatus
+data: {"event": "flowNodeStatus", "name": "LLM", "status": "running"}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "物", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "联网", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "（", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "Io", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "T", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "，即", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "Internet", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": " of", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": " Things", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "）", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "是", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "一个", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "技术", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "概", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "念", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "，", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "指", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "的是", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "通过", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "互联网", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "实现", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "物", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "品", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "之间", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "的", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "连接", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "和", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "通信", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "。这", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "些", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "物", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "品", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "可以", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "是", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "各种", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "设备", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "，如", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "家", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "用", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "电", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "器", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "、", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "汽车", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "、", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "工业", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "机器", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "、", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "可", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "穿", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "戴", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "设备", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "、", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "传", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "感", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "器", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "等等", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "。", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "物", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "联网", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "使", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "得", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "这些", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "设备", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "能够", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "收", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "集", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "和", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "交换", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "数据", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "，从", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "而", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "实现", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "自动", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "化", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "、", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "智能", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "化", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "和", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "远", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "程", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "控制", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "。\n\n", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "物", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "联网", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "的", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "核心", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "思想", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "是", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "将", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "物", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "理", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "世界", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "和", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "数字", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "世界", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "结合", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "起来", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "，使", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "设备", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "能够", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "更加", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "智能", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "并", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "提供", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "更", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "好的", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "服务", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "。例如", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "，通过", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "物", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "联网", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "技术", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "，可以", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "实现", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "智能", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "家", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "居", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "系统", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "，通过", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "手机", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "或", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "其他", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "设备", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "远", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "程", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "控制", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "家", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "里的", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "灯", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "光", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "、", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "温", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "度", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "和", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "安全", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "系统", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "；", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "在", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "工业", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "领域", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "，可以", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "实现", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "智能", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "制造", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "，通过", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "实时", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "监", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "测", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "生产", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "线", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "上的", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "设备", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "来", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "提高", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "效率", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "和", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "减少", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "故", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "障", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "时间", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "。\n\n", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "物", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "联网", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "系统", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "通常", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "由", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "几个", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "关键", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "组件", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "组成", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "：\n\n", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "1", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": ".", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": " **", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "传", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "感", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "器", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "和", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "设备", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "**", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "：", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "负责", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "收", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "集", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "数据", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "，比如", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "温", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "度", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "、", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "运动", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "、", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "位置", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "等", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "。\n", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "2", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": ".", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": " **", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "网络", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "连接", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "**", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "：", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "负责", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "设备", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "之间", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "以及", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "设备", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "与", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "中央", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "服务器", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "之间", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "的数据", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "传", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "输", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "。\n", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "3", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": ".", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": " **", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "数据", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "处理", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "和", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "分析", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "**", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "：", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "集中", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "处理", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "采", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "集", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "的数据", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "，", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "进行", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "分析", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "以", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "获取", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "有", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "用", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "的信息", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "。\n", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "4", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": ".", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": " **", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "用户", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "界", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "面", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "**", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "：", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "允许", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "用户", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "与", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "系统", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "互动", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "，", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "通常", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "是", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "通过", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "应用", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "程序", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "或", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "网站", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "。\n\n", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "物", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "联网", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "技术", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "面", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "临", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "一些", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "挑战", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "，如", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "数据", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "安全", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "、", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "隐", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "私", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "问题", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "以及", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "设备", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "之间", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "的", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "兼", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "容", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "性", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "，但", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "其", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "发展", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "潜", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "力", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "巨大", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "，在", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "提高", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "生产", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "效率", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "、", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "改善", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "生活", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "质量", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "和", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "推动", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "创新", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "方面", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "有", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "显", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "著", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "作用", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "。", "reasoning_content": "", "tool_calls": []}}
+
+event: done
+data: {"event": "done", "id": "fp_ded0d14823", "prompt_tokens": 15, "completion_tokens": 477, "total_tokens": 492}
+
+event: flowNodeStatus
+data: {"event": "flowNodeStatus", "name": "LLM", "status": "done", "data": {"node_type": "llm", "duration": 4.99, "node_id": "rAbqyqfK", "inputs": [{"key": "temperature", "renderType": "input", "valueType": "number"}, {"key": "maxToken", "renderType": "input", "valueType": "number"}, {"key": "history", "renderType": "input", "valueType": "number"}, {"key": "quoteQA", "renderType": "input", "valueType": "arrayString"}, {"key": "prompt", "renderType": "input", "valueType": "string"}, {"key": "tools", "renderType": "input", "valueType": "arrayObject"}, {"key": "leadingQuestions", "renderType": "input", "valueType": "boolean"}, {"key": "imageQuality", "renderType": "input", "valueType": "string"}, {"key": "aichatModel", "renderType": "input", "valueType": "string"}, {"key": "query", "renderType": "reference", "valueType": "string", "referenceNode": "lk3JSPfJ", "referenceKey": "user_chat_input", "value": "物联网是什么？"}, {"key": "files", "renderType": "input", "valueType": "string"}, {"key": "aichatAnswer", "renderType": "input", "valueType": "boolean", "value": true}, {"key": "aichatResponseFormat", "renderType": "input", "valueType": "string"}, {"key": "aichatJsonSchema", "renderType": "input", "valueType": "string"}], "outputs": [{"key": "answer", "renderType": "input", "valueType": "string"}], "params": [], "mode": "gpt-4o", "temperature": null, "max_tokens": null, "history": 6, "query": "物联网是什么？", "prompt_messages": [{"role": "user", "content": [{"type": "text", "text": "物联网是什么？", "image_url": null}], "reasoning_content": "", "name": null}, {"role": "assistant", "content": "物联网（IoT，即Internet of Things）是一个技术概念，指的是通过互联网实现物品之间的连接和通信。这些物品可以是各种设备，如家用电器、汽车、工业机器、可穿戴设备、传感器等等。物联网使得这些设备能够收集和交换数据，从而实现自动化、智能化和远程控制。\n\n物联网的核心思想是将物理世界和数字世界结合起来，使设备能够更加智能并提供更好的服务。例如，通过物联网技术，可以实现智能家居系统，通过手机或其他设备远程控制家里的灯光、温度和安全系统；在工业领域，可以实现智能制造，通过实时监测生产线上的设备来提高效率和减少故障时间。\n\n物联网系统通常由几个关键组件组成：\n\n1. **传感器和设备**：负责收集数据，比如温度、运动、位置等。\n2. **网络连接**：负责设备之间以及设备与中央服务器之间的数据传输。\n3. **数据处理和分析**：集中处理采集的数据，进行分析以获取有用的信息。\n4. **用户界面**：允许用户与系统互动，通常是通过应用程序或网站。\n\n物联网技术面临一些挑战，如数据安全、隐私问题以及设备之间的兼容性，但其发展潜力巨大，在提高生产效率、改善生活质量和推动创新方面有显著作用。", "reasoning_content": "", "name": null, "tool_calls": [], "tool_called": []}], "completion_tokens": 477, "prompt_tokens": 15, "total_tokens": 492, "content": "物联网（IoT，即Internet of Things）是一个技术概念，指的是通过互联网实现物品之间的连接和通信。这些物品可以是各种设备，如家用电器、汽车、工业机器、可穿戴设备、传感器等等。物联网使得这些设备能够收集和交换数据，从而实现自动化、智能化和远程控制。\n\n物联网的核心思想是将物理世界和数字世界结合起来，使设备能够更加智能并提供更好的服务。例如，通过物联网技术，可以实现智能家居系统，通过手机或其他设备远程控制家里的灯光、温度和安全系统；在工业领域，可以实现智能制造，通过实时监测生产线上的设备来提高效率和减少故障时间。\n\n物联网系统通常由几个关键组件组成：\n\n1. **传感器和设备**：负责收集数据，比如温度、运动、位置等。\n2. **网络连接**：负责设备之间以及设备与中央服务器之间的数据传输。\n3. **数据处理和分析**：集中处理采集的数据，进行分析以获取有用的信息。\n4. **用户界面**：允许用户与系统互动，通常是通过应用程序或网站。\n\n物联网技术面临一些挑战，如数据安全、隐私问题以及设备之间的兼容性，但其发展潜力巨大，在提高生产效率、改善生活质量和推动创新方面有显著作用。", "reasoning_content": "", "images": [], "files": [], "tool_called": [], "stream": true, "response_format": null, "json_schema": null, "answer": true}}
+
+event: flowNodeStatus
+data: {"event": "flowNodeStatus", "name": "结束节点", "status": "running"}
+
+event: flowNodeStatus
+data: {"event": "flowNodeStatus", "name": "结束节点", "status": "done", "data": {"node_type": "end", "duration": 0.0, "node_id": "iDuhTMgU", "inputs": [], "outputs": [{"key": "id", "renderType": "input", "valueType": "string"}, {"key": "app_id", "renderType": "input", "valueType": "string"}, {"key": "chat_id", "renderType": "input", "valueType": "string"}, {"key": "type", "renderType": "input", "valueType": "string"}, {"key": "text", "renderType": "input", "valueType": "string"}, {"key": "files", "renderType": "input", "valueType": "arrayObject"}, {"key": "data", "renderType": "input", "valueType": "object"}, {"key": "created_at", "renderType": "input", "valueType": "number"}, {"key": "token", "renderType": "input", "valueType": "number"}, {"key": "duration", "renderType": "input", "valueType": "number"}, {"key": "output1", "renderType": "reference", "valueType": "string", "referenceNode": "rAbqyqfK", "referenceKey": "answer", "value": "物联网（IoT，即Internet of Things）是一个技术概念，指的是通过互联网实现物品之间的连接和通信。这些物品可以是各种设备，如家用电器、汽车、工业机器、可穿戴设备、传感器等等。物联网使得这些设备能够收集和交换数据，从而实现自动化、智能化和远程控制。\n\n物联网的核心思想是将物理世界和数字世界结合起来，使设备能够更加智能并提供更好的服务。例如，通过物联网技术，可以实现智能家居系统，通过手机或其他设备远程控制家里的灯光、温度和安全系统；在工业领域，可以实现智能制造，通过实时监测生产线上的设备来提高效率和减少故障时间。\n\n物联网系统通常由几个关键组件组成：\n\n1. **传感器和设备**：负责收集数据，比如温度、运动、位置等。\n2. **网络连接**：负责设备之间以及设备与中央服务器之间的数据传输。\n3. **数据处理和分析**：集中处理采集的数据，进行分析以获取有用的信息。\n4. **用户界面**：允许用户与系统互动，通常是通过应用程序或网站。\n\n物联网技术面临一些挑战，如数据安全、隐私问题以及设备之间的兼容性，但其发展潜力巨大，在提高生产效率、改善生活质量和推动创新方面有显著作用。"}], "params": []}}
+
+event: flowResponses
+data: {"event": "flowResponses", "data": [{"node_type": "start", "duration": 0.0, "node_id": "lk3JSPfJ", "inputs": [{"key": "introduction", "renderType": "input", "valueType": "string"}], "outputs": [{"key": "user_chat_input", "renderType": "input", "valueType": "string", "value": "物联网是什么？"}, {"key": "files", "renderType": "input", "valueType": "arrayObject", "value": []}], "params": []}, {"node_type": "llm", "duration": 4.99, "node_id": "rAbqyqfK", "inputs": [{"key": "temperature", "renderType": "input", "valueType": "number"}, {"key": "maxToken", "renderType": "input", "valueType": "number"}, {"key": "history", "renderType": "input", "valueType": "number"}, {"key": "quoteQA", "renderType": "input", "valueType": "arrayString"}, {"key": "prompt", "renderType": "input", "valueType": "string"}, {"key": "tools", "renderType": "input", "valueType": "arrayObject"}, {"key": "leadingQuestions", "renderType": "input", "valueType": "boolean"}, {"key": "imageQuality", "renderType": "input", "valueType": "string"}, {"key": "aichatModel", "renderType": "input", "valueType": "string"}, {"key": "query", "renderType": "reference", "valueType": "string", "referenceNode": "lk3JSPfJ", "referenceKey": "user_chat_input", "value": "物联网是什么？"}, {"key": "files", "renderType": "input", "valueType": "string"}, {"key": "aichatAnswer", "renderType": "input", "valueType": "boolean", "value": true}, {"key": "aichatResponseFormat", "renderType": "input", "valueType": "string"}, {"key": "aichatJsonSchema", "renderType": "input", "valueType": "string"}], "outputs": [{"key": "answer", "renderType": "input", "valueType": "string"}], "params": [], "mode": "gpt-4o", "history": 6, "query": "物联网是什么？", "prompt_messages": [{"role": "user", "content": [{"type": "text", "text": "物联网是什么？"}], "reasoning_content": ""}, {"role": "assistant", "content": "物联网（IoT，即Internet of Things）是一个技术概念，指的是通过互联网实现物品之间的连接和通信。这些物品可以是各种设备，如家用电器、汽车、工业机器、可穿戴设备、传感器等等。物联网使得这些设备能够收集和交换数据，从而实现自动化、智能化和远程控制。\n\n物联网的核心思想是将物理世界和数字世界结合起来，使设备能够更加智能并提供更好的服务。例如，通过物联网技术，可以实现智能家居系统，通过手机或其他设备远程控制家里的灯光、温度和安全系统；在工业领域，可以实现智能制造，通过实时监测生产线上的设备来提高效率和减少故障时间。\n\n物联网系统通常由几个关键组件组成：\n\n1. **传感器和设备**：负责收集数据，比如温度、运动、位置等。\n2. **网络连接**：负责设备之间以及设备与中央服务器之间的数据传输。\n3. **数据处理和分析**：集中处理采集的数据，进行分析以获取有用的信息。\n4. **用户界面**：允许用户与系统互动，通常是通过应用程序或网站。\n\n物联网技术面临一些挑战，如数据安全、隐私问题以及设备之间的兼容性，但其发展潜力巨大，在提高生产效率、改善生活质量和推动创新方面有显著作用。", "reasoning_content": "", "tool_calls": [], "tool_called": []}], "completion_tokens": 477, "prompt_tokens": 15, "total_tokens": 492, "content": "物联网（IoT，即Internet of Things）是一个技术概念，指的是通过互联网实现物品之间的连接和通信。这些物品可以是各种设备，如家用电器、汽车、工业机器、可穿戴设备、传感器等等。物联网使得这些设备能够收集和交换数据，从而实现自动化、智能化和远程控制。\n\n物联网的核心思想是将物理世界和数字世界结合起来，使设备能够更加智能并提供更好的服务。例如，通过物联网技术，可以实现智能家居系统，通过手机或其他设备远程控制家里的灯光、温度和安全系统；在工业领域，可以实现智能制造，通过实时监测生产线上的设备来提高效率和减少故障时间。\n\n物联网系统通常由几个关键组件组成：\n\n1. **传感器和设备**：负责收集数据，比如温度、运动、位置等。\n2. **网络连接**：负责设备之间以及设备与中央服务器之间的数据传输。\n3. **数据处理和分析**：集中处理采集的数据，进行分析以获取有用的信息。\n4. **用户界面**：允许用户与系统互动，通常是通过应用程序或网站。\n\n物联网技术面临一些挑战，如数据安全、隐私问题以及设备之间的兼容性，但其发展潜力巨大，在提高生产效率、改善生活质量和推动创新方面有显著作用。", "reasoning_content": "", "images": [], "files": [], "tool_called": [], "stream": true, "answer": true}, {"node_type": "end", "duration": 0.0, "node_id": "iDuhTMgU", "inputs": [], "outputs": [{"key": "id", "renderType": "input", "valueType": "string"}, {"key": "app_id", "renderType": "input", "valueType": "string"}, {"key": "chat_id", "renderType": "input", "valueType": "string"}, {"key": "type", "renderType": "input", "valueType": "string"}, {"key": "text", "renderType": "input", "valueType": "string"}, {"key": "files", "renderType": "input", "valueType": "arrayObject"}, {"key": "data", "renderType": "input", "valueType": "object"}, {"key": "created_at", "renderType": "input", "valueType": "number"}, {"key": "token", "renderType": "input", "valueType": "number"}, {"key": "duration", "renderType": "input", "valueType": "number"}, {"key": "output1", "renderType": "reference", "valueType": "string", "referenceNode": "rAbqyqfK", "referenceKey": "answer", "value": "物联网（IoT，即Internet of Things）是一个技术概念，指的是通过互联网实现物品之间的连接和通信。这些物品可以是各种设备，如家用电器、汽车、工业机器、可穿戴设备、传感器等等。物联网使得这些设备能够收集和交换数据，从而实现自动化、智能化和远程控制。\n\n物联网的核心思想是将物理世界和数字世界结合起来，使设备能够更加智能并提供更好的服务。例如，通过物联网技术，可以实现智能家居系统，通过手机或其他设备远程控制家里的灯光、温度和安全系统；在工业领域，可以实现智能制造，通过实时监测生产线上的设备来提高效率和减少故障时间。\n\n物联网系统通常由几个关键组件组成：\n\n1. **传感器和设备**：负责收集数据，比如温度、运动、位置等。\n2. **网络连接**：负责设备之间以及设备与中央服务器之间的数据传输。\n3. **数据处理和分析**：集中处理采集的数据，进行分析以获取有用的信息。\n4. **用户界面**：允许用户与系统互动，通常是通过应用程序或网站。\n\n物联网技术面临一些挑战，如数据安全、隐私问题以及设备之间的兼容性，但其发展潜力巨大，在提高生产效率、改善生活质量和推动创新方面有显著作用。"}], "params": []}]}
+

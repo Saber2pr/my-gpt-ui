@@ -1,11 +1,11 @@
 require('dotenv').config()
 
+const { spawn } = require('child_process')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const path = require('path')
 
 const webpack = require('webpack')
-const webpackDevServer = require('webpack-dev-server')
 
 const publicPath = (resourcePath, context) =>
   path.relative(path.dirname(resourcePath), context) + '/'
@@ -13,10 +13,13 @@ const publicPath = (resourcePath, context) =>
 // 这里写cdn地址，如果静态资源有上传的话
 const cdn = '/'
 
-const GPT_API = process.env.GPT_API
+const GPT_API_FRONTEND = process.env.GPT_API_FRONTEND
+const GPT_API_BACKEND = process.env.GPT_API_BACKEND
 const GPT_TOKEN = process.env.GPT_TOKEN
-console.log('GPT_API', GPT_API)
+console.log('GPT_API_BACKEND', GPT_API_BACKEND)
 console.log('GPT_TOKEN', GPT_TOKEN)
+
+let serverProcess = null
 
 /**
  * @type {webpack.Configuration}
@@ -31,19 +34,20 @@ module.exports = {
     path: path.join(__dirname, 'build'),
     publicPath: process.env.NODE_ENV === 'production' ? cdn : '/',
   },
-  /**
-   * @type {webpackDevServer.Configuration}
-   */
   devServer: {
-    // 本地调试跨域代理
-    proxy: {
-      '/api': {
-        target: GPT_API, // 这里写你后端的api地址
-        changeOrigin: true,
-        pathRewrite: {
-          '^/api': '',
-        },
-      },
+    onBeforeSetupMiddleware() {
+      if (!serverProcess) {
+        console.log('🚀 启动本地 Node.js 服务器...')
+        serverProcess = spawn('node', ['server.js'], {
+          stdio: 'inherit', // 让 Node.js 服务器的日志显示在终端
+          shell: true,
+        })
+
+        serverProcess.on('close', (code) => {
+          console.log(`Node.js 服务器进程退出，退出码：${code}`)
+          serverProcess = null
+        })
+      }
     },
   },
   module: {
@@ -84,6 +88,7 @@ module.exports = {
     }),
     new webpack.EnvironmentPlugin({
       GPT_TOKEN,
+      GPT_API_FRONTEND,
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[hash].css',

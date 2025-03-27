@@ -4,15 +4,17 @@ import remarkGfm from 'remark-gfm'
 import { MarkdownTextPrimitive } from '@assistant-ui/react-markdown'
 import { Skeleton } from 'antd'
 import { CodeBlock } from '../Codeblock'
+import { TextContentPartProps } from '@assistant-ui/react'
 
-const MarkdownTextImpl = (props) => {
+const MarkdownTextImpl = (props: TextContentPartProps) => {
   // props.status.type 可以拿到当前 ai 对话的进度、状态
   // running、complete、incomplete
   // reason: "cancelled"
   const type = props?.status?.type
-  const reason = props?.status?.reason
+  const text = props?.text
 
   if (type === 'incomplete') {
+    const reason = props?.status?.reason
     if (reason === 'cancelled') {
       return (
         <Skeleton.Node
@@ -22,13 +24,13 @@ const MarkdownTextImpl = (props) => {
             height: '38px',
           }}
         >
-          已取消
+          失败：{reason}
         </Skeleton.Node>
       )
     }
   }
 
-  if (type === 'running') {
+  if (type === 'running' && !text) {
     return (
       <Skeleton.Node
         active
@@ -42,6 +44,7 @@ const MarkdownTextImpl = (props) => {
       </Skeleton.Node>
     )
   }
+
   return (
     <div
       style={{
