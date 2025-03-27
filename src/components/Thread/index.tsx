@@ -1,25 +1,15 @@
-import {
-  Affix,
-  Alert,
-  Avatar,
-  Button,
-  Card,
-  Empty,
-  Skeleton,
-  Space,
-  Spin,
-} from 'antd'
+import { Alert, Avatar, Button, Card, Space } from 'antd'
 import React, { FC } from 'react'
 
 import {
-  ArrowDownOutlined as ArrowDownIcon,
-  CheckCircleOutlined as CheckIcon,
-  CopyOutlined as CopyIcon,
-  EditOutlined as PencilIcon,
-  LeftOutlined as ChevronLeftIcon,
-  RedoOutlined as RefreshCwIcon,
-  RightOutlined as ChevronRightIcon,
-  SendOutlined as SendHorizontalIcon,
+  ArrowDownOutlined,
+  CheckCircleOutlined,
+  CopyOutlined,
+  EditOutlined,
+  LeftOutlined,
+  RedoOutlined,
+  RightOutlined,
+  SendOutlined,
   StopOutlined,
 } from '@ant-design/icons'
 import {
@@ -102,7 +92,7 @@ const ThreadScrollToBottom: FC = () => {
           borderRadius: 12,
         }}
         type="dashed"
-        icon={<ArrowDownIcon />}
+        icon={<ArrowDownOutlined />}
       ></Button>
     </ThreadPrimitive.ScrollToBottom>
   )
@@ -171,7 +161,7 @@ const ComposerAction: FC = () => {
               height: '47px',
               borderRadius: 12,
             }}
-            icon={<SendHorizontalIcon />}
+            icon={<SendOutlined />}
           />
         </ComposerPrimitive.Send>
       </ThreadPrimitive.If>
@@ -222,7 +212,7 @@ const UserActionBar: FC = () => {
   return (
     <ActionBarPrimitive.Root hideWhenRunning autohide="not-last">
       <ActionBarPrimitive.Edit asChild>
-        <PencilIcon />
+        <EditOutlined />
       </ActionBarPrimitive.Edit>
     </ActionBarPrimitive.Root>
   )
@@ -312,15 +302,15 @@ const AssistantActionBar: FC = () => {
         <ActionBarPrimitive.Copy asChild>
           <div style={{ cursor: 'pointer' }}>
             <MessagePrimitive.If copied>
-              <CheckIcon />
+              <CheckCircleOutlined />
             </MessagePrimitive.If>
             <MessagePrimitive.If copied={false}>
-              <CopyIcon />
+              <CopyOutlined />
             </MessagePrimitive.If>
           </div>
         </ActionBarPrimitive.Copy>
         <ActionBarPrimitive.Reload asChild>
-          <RefreshCwIcon />
+          <RedoOutlined />
         </ActionBarPrimitive.Reload>
       </Space>
     </ActionBarPrimitive.Root>
@@ -341,13 +331,13 @@ const BranchPicker: FC<BranchPickerPrimitive.Root.Props> = ({
       {...rest}
     >
       <BranchPickerPrimitive.Previous asChild>
-        <ChevronLeftIcon />
+        <LeftOutlined />
       </BranchPickerPrimitive.Previous>
       <span>
         <BranchPickerPrimitive.Number /> / <BranchPickerPrimitive.Count />
       </span>
       <BranchPickerPrimitive.Next asChild>
-        <ChevronRightIcon />
+        <RightOutlined />
       </BranchPickerPrimitive.Next>
     </BranchPickerPrimitive.Root>
   )
