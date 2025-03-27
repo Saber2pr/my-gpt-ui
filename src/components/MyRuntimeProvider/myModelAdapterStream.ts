@@ -4,7 +4,7 @@ import { streamRequest } from '@/utils/streamRequest'
 import { ChatModelAdapter } from '@assistant-ui/react'
 
 export const MyModelAdapterStream: ChatModelAdapter = {
-  async *run({ messages, abortSignal, ...reset }) {
+  async *run({ messages, abortSignal }) {
     let inputText = ''
 
     // messages 保存了当前对话的上下文，messages[messages.length - 1] 就是最后一次即当前询问的内容
