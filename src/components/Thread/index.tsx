@@ -144,7 +144,7 @@ const Composer: FC = () => {
   return (
     <ComposerPrimitive.Root>
       <InputSpace>
-        <UserInput rows={1} autoFocus placeholder="Write a message..." />
+        <UserInput rows={1} autoFocus placeholder="输入你的问句" />
         <ComposerAction />
       </InputSpace>
     </ComposerPrimitive.Root>
