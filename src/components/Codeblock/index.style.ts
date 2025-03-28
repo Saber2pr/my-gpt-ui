@@ -2,6 +2,8 @@ import styled from 'styled-components'
 
 export const Contain = styled.div`
   position: relative;
+  width: 800px;
+  overflow: auto;
 
   .Paste {
     position: absolute;
