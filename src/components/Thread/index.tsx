@@ -1,18 +1,22 @@
 import { Alert, Avatar, Button, Card, Space } from 'antd'
-import React, { FC } from 'react'
+import classnames from 'classnames'
+import React, { FC, useEffect } from 'react'
+import useSpeechToText from 'react-hook-speech-to-text'
 
 import {
   ArrowDownOutlined,
+  AudioOutlined,
   CheckCircleOutlined,
   CopyOutlined,
   EditOutlined,
   LeftOutlined,
+  LoadingOutlined,
+  PauseCircleOutlined,
+  PlayCircleOutlined,
   RedoOutlined,
   RightOutlined,
   SendOutlined,
   StopOutlined,
-  PauseCircleOutlined,
-  PlayCircleOutlined,
 } from '@ant-design/icons'
 import {
   ActionBarPrimitive,
@@ -20,6 +24,7 @@ import {
   ComposerPrimitive,
   MessagePrimitive,
   ThreadPrimitive,
+  useThreadRuntime,
 } from '@assistant-ui/react'
 
 import { MarkdownText } from '../MarkdownText'
@@ -151,21 +156,71 @@ const Composer: FC = () => {
   )
 }
 
+// 小鸟叽叽喳喳地唱着动听的歌，五颜六色的花朵随风舞动，像是在跟我打招呼，真是太美妙啦！
+const SpeechInputButton: FC = () => {
+  const {
+    error,
+    interimResult,
+    isRecording,
+    results,
+    startSpeechToText,
+    stopSpeechToText,
+  } = useSpeechToText({
+    continuous: true,
+    useLegacyResults: false,
+  })
+
+  const threadRuntime = useThreadRuntime()
+
+  useEffect(() => {
+    if (isRecording && interimResult && threadRuntime) {
+      threadRuntime.composer.setText(interimResult)
+    }
+  }, [isRecording, interimResult, threadRuntime])
+
+  if (error) {
+    console.log(`Web Speech API is not available in this browser.`, error)
+    return <></>
+  }
+
+  return (
+    <Button
+      className={classnames('mic-button', isRecording && 'listening')}
+      style={{
+        width: '47px',
+        height: '47px',
+        borderRadius: 12,
+      }}
+      onClick={() => {
+        if (isRecording) {
+          stopSpeechToText()
+        } else {
+          startSpeechToText()
+        }
+      }}
+      icon={isRecording ? <LoadingOutlined /> : <AudioOutlined />}
+    />
+  )
+}
+
 // 底部的发送/停止对话消息按钮
 const ComposerAction: FC = () => {
   return (
     <>
       <ThreadPrimitive.If running={false}>
-        <ComposerPrimitive.Send asChild>
-          <Button
-            style={{
-              width: '47px',
-              height: '47px',
-              borderRadius: 12,
-            }}
-            icon={<SendOutlined />}
-          />
-        </ComposerPrimitive.Send>
+        <Space>
+          <ComposerPrimitive.Send asChild>
+            <Button
+              style={{
+                width: '47px',
+                height: '47px',
+                borderRadius: 12,
+              }}
+              icon={<SendOutlined />}
+            />
+          </ComposerPrimitive.Send>
+          <SpeechInputButton />
+        </Space>
       </ThreadPrimitive.If>
       <ThreadPrimitive.If running>
         <ComposerPrimitive.Cancel asChild>

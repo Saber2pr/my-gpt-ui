@@ -5,6 +5,7 @@ import { MyRuntimeProvider } from './components/MyRuntimeProvider'
 import { Thread } from './components/Thread'
 import { ThreadList } from './components/ThreadList'
 import { Aside, Content, Layout, Root } from './app.style'
+import './app.less'
 
 const MyApp = () => {
   return (

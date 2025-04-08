@@ -1,0 +1,17 @@
+/* 动效状态 */
+.mic-button.listening {
+  animation: pulseColor 1.2s infinite;
+}
+
+/* 淡蓝色动画 */
+@keyframes pulseColor {
+  0% {
+    box-shadow: 0 0 0 0 rgba(105, 192, 255, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(145, 213, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(105, 192, 255, 0.6);
+  }
+}
