@@ -172,10 +172,10 @@ const SpeechInputButton: FC = () => {
   const threadRuntime = useThreadRuntime()
 
   useEffect(() => {
-    if (isRecording && interimResult && threadRuntime) {
+    if (interimResult) {
       threadRuntime.composer.setText(interimResult)
     }
-  }, [isRecording, interimResult, threadRuntime])
+  }, [interimResult])
 
   if (error) {
     console.log(`Web Speech API is not available in this browser.`, error)
