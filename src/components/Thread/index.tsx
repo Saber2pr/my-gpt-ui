@@ -1,5 +1,4 @@
 import { Alert, Avatar, Button, Card, Space } from 'antd'
-import classnames from 'classnames'
 import React, { FC, useEffect } from 'react'
 import useSpeechToText from 'react-hook-speech-to-text'
 
@@ -185,7 +184,6 @@ const SpeechInputButton: FC = () => {
 
   return (
     <Button
-      className={classnames('mic-button', isRecording && 'listening')}
       style={{
         width: '47px',
         height: '47px',
