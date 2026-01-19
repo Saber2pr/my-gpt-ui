@@ -7,15 +7,16 @@ import {
 } from '@assistant-ui/react'
 
 import { MyModelAdapterStream } from './myModelAdapterStream'
+import { useLLm } from '@/llm/context'
 
 export interface MyRuntimeProviderProps {
   children: React.ReactNode
 }
 
 export function MyRuntimeProvider({ children }: MyRuntimeProviderProps) {
-  // 使用自定义的 ai 接口请求
-  // const runtime = useLocalRuntime(MyModelAdapter)
-  const runtime = useLocalRuntime(MyModelAdapterStream, {
+  const llm = useLLm()
+
+  const runtime = useLocalRuntime(MyModelAdapterStream(llm), {
     adapters: {
       speech: new WebSpeechSynthesisAdapter(),
     },

@@ -13,12 +13,6 @@ const publicPath = (resourcePath, context) =>
 // 这里写cdn地址，如果静态资源有上传的话
 const cdn = '/'
 
-const GPT_API_FRONTEND = process.env.GPT_API_FRONTEND
-const GPT_API_BACKEND = process.env.GPT_API_BACKEND
-const GPT_TOKEN = process.env.GPT_TOKEN
-console.log('GPT_API_BACKEND', GPT_API_BACKEND)
-console.log('GPT_TOKEN', GPT_TOKEN)
-
 let serverProcess = null
 
 /**
@@ -85,10 +79,6 @@ module.exports = {
     // index.html模板设置
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'template.html'),
-    }),
-    new webpack.EnvironmentPlugin({
-      GPT_TOKEN,
-      GPT_API_FRONTEND,
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[hash].css',
