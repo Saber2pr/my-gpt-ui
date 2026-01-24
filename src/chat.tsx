@@ -28,7 +28,7 @@ import {
 const MyApp = ({ config }: { config: AIAssistantConfig }) => {
   const [open, setOpen] = useState(false)
   const [activeTab, setActiveTab] = useState('chat')
-  
+
   return (
     <AIConfigContext.Provider value={config}>
       <MyAppContent open={open} setOpen={setOpen} activeTab={activeTab} setActiveTab={setActiveTab} config={config} />
@@ -36,14 +36,14 @@ const MyApp = ({ config }: { config: AIAssistantConfig }) => {
   )
 }
 
-const MyAppContent = ({ 
-  open, 
-  setOpen, 
-  activeTab, 
+const MyAppContent = ({
+  open,
+  setOpen,
+  activeTab,
   setActiveTab,
   config
-}: { 
-  open: boolean, 
+}: {
+  open: boolean,
   setOpen: (open: boolean) => void,
   activeTab: string,
   setActiveTab: (tab: string) => void,
@@ -54,7 +54,7 @@ const MyAppContent = ({
   const [loadingProgress, setLoadingProgress] = useState(0)
   const [loading, setLoading] = useState(false)
   const [engine, setEngine] = useState<any>(null)
-  
+
   const defaultPos = config.initialPosition || { x: window.innerWidth - 100, y: window.innerHeight - 100 }
   const [position, setPosition] = useState(defaultPos)
   const [isDragging, setIsDragging] = useState(false)
@@ -67,11 +67,11 @@ const MyAppContent = ({
     const handleResize = () => {
       const currentWidth = window.innerWidth;
       const currentHeight = window.innerHeight;
-      
+
       setPosition(prev => {
         // 计算按钮相对于右侧和底部的距离比例，或者简单的保持吸附状态
         const isAtRight = prev.x > lastWindowSize.current.width / 2;
-        
+
         let newX = prev.x;
         // 如果原本在右侧，放大窗口时让它跟随右侧边缘
         if (isAtRight) {
@@ -90,7 +90,7 @@ const MyAppContent = ({
         // 最终边界安全检查
         const safeX = Math.max(20, Math.min(newX, currentWidth - 84));
         const safeY = Math.max(20, Math.min(newY, currentHeight - 84));
-        
+
         buttonPos.current = { x: safeX, y: safeY };
         return { x: safeX, y: safeY };
       });
@@ -134,15 +134,15 @@ const MyAppContent = ({
   const handleMouseDown = (e: React.MouseEvent) => {
     setIsDragging(false)
     dragStartPos.current = { x: e.clientX, y: e.clientY }
-    
+
     const onMouseMove = (moveEvent: MouseEvent) => {
       const deltaX = Math.abs(moveEvent.clientX - dragStartPos.current.x)
       const deltaY = Math.abs(moveEvent.clientY - dragStartPos.current.y)
-      
+
       if (deltaX > 5 || deltaY > 5) {
         setIsDragging(true)
       }
-      
+
       if (isDragging || deltaX > 5 || deltaY > 5) {
         const newX = moveEvent.clientX - 32
         const newY = moveEvent.clientY - 32
@@ -154,11 +154,11 @@ const MyAppContent = ({
     const onMouseUp = () => {
       document.removeEventListener('mousemove', onMouseMove)
       document.removeEventListener('mouseup', onMouseUp)
-      
+
       // 吸附逻辑
       const centerX = window.innerWidth / 2
       const finalX = buttonPos.current.x < centerX ? 20 : window.innerWidth - 84
-      
+
       // 垂直边界检查
       let finalY = buttonPos.current.y
       if (finalY < 20) finalY = 20
@@ -185,11 +185,11 @@ const MyAppContent = ({
   return (
     <LLMContext.Provider value={engine}>
       <MyRuntimeProvider>
-        <FloatButton 
+        <FloatButton
           onClick={showDrawer}
           onMouseDown={handleMouseDown}
-          style={{ 
-            left: position.x, 
+          style={{
+            left: position.x,
             top: position.y,
             bottom: 'auto',
             right: 'auto',
@@ -210,9 +210,9 @@ const MyAppContent = ({
               <span>{t('assistantTitle')}</span>
               {!loading && engine && (
                 <ThreadListPrimitive.New asChild>
-                  <Button 
-                    type="text" 
-                    icon={<PlusOutlined />} 
+                  <Button
+                    type="text"
+                    icon={<PlusOutlined />}
                     onClick={() => setActiveTab('chat')}
                   >
                     {t('newChat')}
@@ -223,15 +223,15 @@ const MyAppContent = ({
           }
           placement="right"
           onClose={onClose}
-          visible={open}
+          open={open}
           width={600}
           bodyStyle={{ padding: '0 16px', display: 'flex', flexDirection: 'column' }}
         >
           {loading || !engine ? (
             <LoadingContainer>
-              <Progress 
-                type="circle" 
-                percent={loadingProgress} 
+              <Progress
+                type="circle"
+                percent={loadingProgress}
                 strokeColor={{
                   '0%': '#108ee9',
                   '100%': '#87d068',

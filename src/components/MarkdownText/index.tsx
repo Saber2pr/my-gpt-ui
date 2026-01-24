@@ -33,7 +33,7 @@ const MarkdownTextImpl = (props: TextContentPartProps) => {
   return (
     <div
       style={{
-        marginTop: 6,
+        marginTop: '-0.5em',
         maxWidth: '100%',
         overflow: 'hidden',
         wordBreak: 'break-word',

@@ -12,6 +12,7 @@ export const MessageContainer = styled.div`
 
   & > p {
     margin-bottom: 0;
+    margin-top: 0;
   }
 `
 
@@ -34,29 +35,31 @@ export const InputSpace = styled(Space)`
 `
 
 export const UserInput = styled(ComposerPrimitive.Input)`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: block;
   width: 100%;
-  flex-grow: 1;
-  padding: 10px;
-  background-color: #f7f7f8; /* 类似 ChatGPT 的浅背景 */
+  padding: 12px 16px;
+  background-color: #f7f7f8;
   border-radius: 12px;
-  border: 1px solid #d1d5db; /* 边框颜色 */
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* 微妙的阴影效果 */
-  transition: border-color 0.3s ease; /* 动画效果 */
+  border: 1px solid #d1d5db;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
   outline: none;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 16px;
+  font-family: inherit;
+  font-size: 14px;
   color: #333;
-  min-height: 40px;
+  min-height: 44px;
   max-height: 200px;
   resize: none;
-  transition: background-color 0.5s ease;
   overflow-y: auto;
+  box-sizing: border-box;
 
   &:focus {
     background-color: #fff;
-    border-color: #40a9ff;
+    border-color: #1890ff;
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.1);
+  }
+
+  &::placeholder {
+    color: #bfbfbf;
   }
 `
