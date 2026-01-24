@@ -15,7 +15,6 @@ export const MyModelAdapterStream: (llm: MLCEngine, onBeforeChat?: (messages: Ch
       chatMessages = await onBeforeChat(chatMessages, llm)
     }
  
-    console.log('🚀 ~ myModelAdapterStream ~ chatMessages:', chatMessages);
     const chunks = await llm.chat.completions.create({
       messages: chatMessages as any,
       temperature: 1,
