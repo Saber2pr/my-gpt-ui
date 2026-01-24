@@ -1,11 +1,12 @@
 import initAIAssistant from "./chat";
 
 const h1 = document.createElement('h1')
-h1.textContent = '点击右下角侧边按钮打开AI助手'
+h1.textContent = 'Click the bottom right sidebar button to open the AI assistant'
 document.body.append(h1)
 
 // 默认执行初始化
 initAIAssistant({
+  locale: 'en-US'
   // welcomeMessage: '有什么可以帮忙的？',
   // suggestions: ['如何用 Typescript 实现 Helloworld？', '物联网是什么？'],
   // placeholder: '给 GPT 发送消息',

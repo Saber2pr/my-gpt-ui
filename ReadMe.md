@@ -1,6 +1,6 @@
 ### @saber2pr/ai-assistant
 
-Quickly customize your GPT UI.
+Quickly customize your GPT UI. **100% Client-side, No Server Required.**
 
 ### Installation
 
@@ -28,7 +28,7 @@ initAIAssistant({
 
 #### `initAIAssistant(config?: AIAssistantConfig, container?: HTMLElement)`
 
-Initializes and mounts the AI assistant.
+Initializes and mounts the AI assistant. This assistant runs entirely in the browser using [web-llm](https://github.com/mlc-ai/web-llm), meaning no backend server is required.
 
 - `config`: Configuration object (optional)
 - `container`: The DOM container to mount to, defaults to `document.body`
