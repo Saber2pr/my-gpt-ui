@@ -14,6 +14,16 @@ import { LLMContext } from './llm/context';
 import { getLLMengine } from './llm/engine';
 import { FloatButton } from './styles';
 import { AIAssistantConfig } from './types/assistant';
+import {
+  ChatContainer,
+  DrawerTitle,
+  HistoryContainer,
+  LoadingContainer,
+  LoadingText,
+  LoadingTip,
+  PoweredBy,
+  PoweredByLink,
+} from './chat.style';
 
 const MyApp = ({ config }: { config: AIAssistantConfig }) => {
   const [open, setOpen] = useState(false)
@@ -185,7 +195,10 @@ const MyAppContent = ({
             right: 'auto',
             transition: isDragging ? 'none' : 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
             userSelect: 'none',
-            touchAction: 'none'
+            touchAction: 'none',
+            opacity: open ? 0 : 1,
+            pointerEvents: open ? 'none' : 'auto',
+            transform: open ? 'scale(0) rotate(-20deg)' : (isDragging ? 'scale(1.05)' : 'scale(1)')
           }}
         >
           {loading && !engine ? <LoadingOutlined /> : <MessageOutlined />}
@@ -193,7 +206,7 @@ const MyAppContent = ({
 
         <Drawer
           title={
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingRight: 24 }}>
+            <DrawerTitle>
               <span>{t('assistantTitle')}</span>
               {!loading && engine && (
                 <ThreadListPrimitive.New asChild>
@@ -206,7 +219,7 @@ const MyAppContent = ({
                   </Button>
                 </ThreadListPrimitive.New>
               )}
-            </div>
+            </DrawerTitle>
           }
           placement="right"
           onClose={onClose}
@@ -215,14 +228,7 @@ const MyAppContent = ({
           bodyStyle={{ padding: '0 16px', display: 'flex', flexDirection: 'column' }}
         >
           {loading || !engine ? (
-            <div style={{ 
-              height: '100%', 
-              display: 'flex', 
-              flexDirection: 'column', 
-              justifyContent: 'center', 
-              alignItems: 'center',
-              padding: '0 40px'
-            }}>
+            <LoadingContainer>
               <Progress 
                 type="circle" 
                 percent={loadingProgress} 
@@ -231,13 +237,13 @@ const MyAppContent = ({
                   '100%': '#87d068',
                 }}
               />
-              <div style={{ marginTop: 24, fontSize: 16, color: '#666', textAlign: 'center' }}>
+              <LoadingText>
                 {loadingText}
-              </div>
-              <div style={{ marginTop: 8, fontSize: 12, color: '#999' }}>
+              </LoadingText>
+              <LoadingTip>
                 {t('loadingTip')}
-              </div>
-            </div>
+              </LoadingTip>
+            </LoadingContainer>
           ) : (
             <>
               <Tabs
@@ -249,22 +255,18 @@ const MyAppContent = ({
                 ]}
               />
               <div style={{ flex: 1, position: 'relative', overflow: 'hidden' }}>
-                <div style={{ 
-                  display: activeTab === 'chat' ? 'block' : 'none', 
-                  height: 'calc(100vh - 160px)' 
-                }}>
+                <ChatContainer active={activeTab === 'chat'}>
                   <Thread />
-                </div>
-                <div style={{ 
-                  display: activeTab === 'history' ? 'block' : 'none', 
-                  height: 'calc(100vh - 160px)',
-                  overflowY: 'auto'
-                }}>
+                </ChatContainer>
+                <HistoryContainer active={activeTab === 'history'}>
                   <ThreadList onItemClick={() => setActiveTab('chat')} />
-                </div>
+                </HistoryContainer>
               </div>
             </>
           )}
+          <PoweredBy>
+            Powerd by <PoweredByLink href="https://github.com/Saber2pr/my-gpt-ui" target="_blank" rel="noreferrer">my-gpt-ui</PoweredByLink>
+          </PoweredBy>
         </Drawer>
       </MyRuntimeProvider>
     </LLMContext.Provider>

@@ -47,13 +47,13 @@ export const Thread: FC = () => {
           style={{
             display: 'flex',
             flexDirection: 'column',
-            height: '100%',
+            minHeight: '100%',
           }}
         >
           <div
             style={{
               flexGrow: 1,
-              paddingBottom: 48,
+              paddingBottom: 24,
             }}
           >
             <div style={{ padding: '0px 24px' }}>
@@ -81,7 +81,7 @@ export const Thread: FC = () => {
             </div>
           </div>
 
-          <ButtomSpace style={{ width: '100%', boxSizing: 'border-box' }}>
+          <ButtomSpace style={{ width: '100%', boxSizing: 'border-box', paddingBottom: 16 }}>
             <ThreadScrollToBottom />
             <Composer />
           </ButtomSpace>
