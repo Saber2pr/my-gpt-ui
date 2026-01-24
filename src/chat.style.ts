@@ -19,14 +19,14 @@ export const LoadingContainer = styled.div`
 export const LoadingText = styled.div`
   margin-top: 24px;
   font-size: 16px;
-  color: #666;
+  color: var(--ant-color-text-description, #666);
   text-align: center;
 `;
 
 export const LoadingTip = styled.div`
   margin-top: 8px;
   font-size: 12px;
-  color: #999;
+  color: var(--ant-color-text-quaternary, #999);
 `;
 
 export const ChatContainer = styled.div<{ active: boolean }>`
@@ -44,13 +44,13 @@ export const PoweredBy = styled.div`
   padding: 12px 0;
   text-align: center;
   font-size: 12px;
-  color: #bfbfbf;
-  border-top: 1px solid #f0f0f0;
-  background-color: #fff;
+  color: var(--ant-color-text-quaternary, #bfbfbf);
+  border-top: 1px solid var(--ant-color-border-secondary, #f0f0f0);
+  background-color: var(--ant-color-bg-elevated, #fff);
   z-index: 1;
 `;
 
 export const PoweredByLink = styled.a`
-  color: #bfbfbf;
+  color: var(--ant-color-text-quaternary, #bfbfbf);
   text-decoration: underline;
 `;

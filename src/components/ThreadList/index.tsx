@@ -25,18 +25,19 @@ const StyledThreadListItem = styled(ThreadListItemPrimitive.Root)`
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s ease;
-  border: 1px solid #f0f0f0;
-  background: #fafafa;
+  border: 1px solid var(--ant-color-border-secondary, #f0f0f0);
+  background: var(--ant-color-fill-quaternary, #fafafa);
+  color: var(--ant-color-text, inherit);
 
   &:hover {
-    background-color: #f5f5f5;
-    border-color: #d9d9d9;
+    background-color: var(--ant-color-fill-tertiary, #f5f5f5);
+    border-color: var(--ant-color-border, #d9d9d9);
   }
 
   &[data-active='true'] {
-    background-color: #e6f7ff;
-    border-color: #91d5ff;
-    color: #1890ff;
+    background-color: var(--ant-color-primary-bg, #e6f7ff);
+    border-color: var(--ant-color-primary-border, #91d5ff);
+    color: var(--ant-color-primary, #1890ff);
   }
 `
 

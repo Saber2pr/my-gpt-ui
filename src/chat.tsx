@@ -1,4 +1,4 @@
-import { Button, Drawer, Progress, Tabs } from 'antd';
+import { Button, ConfigProvider, Drawer, Progress, Tabs, theme as antdTheme } from 'antd';
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 
@@ -28,10 +28,28 @@ import {
 const MyApp = ({ config }: { config: AIAssistantConfig }) => {
   const [open, setOpen] = useState(false)
   const [activeTab, setActiveTab] = useState('chat')
+  const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>(() => {
+    if (typeof config.theme === 'function') {
+      return config.theme();
+    }
+    return config.theme || 'light';
+  });
+
+  useEffect(() => {
+    if (open && typeof config.theme === 'function') {
+      setCurrentTheme(config.theme());
+    }
+  }, [open, config.theme]);
 
   return (
     <AIConfigContext.Provider value={config}>
-      <MyAppContent open={open} setOpen={setOpen} activeTab={activeTab} setActiveTab={setActiveTab} config={config} />
+      <ConfigProvider
+        theme={{
+          algorithm: currentTheme === 'dark' ? antdTheme.darkAlgorithm : antdTheme.defaultAlgorithm,
+        }}
+      >
+        <MyAppContent open={open} setOpen={setOpen} activeTab={activeTab} setActiveTab={setActiveTab} config={config} />
+      </ConfigProvider>
     </AIConfigContext.Provider>
   )
 }

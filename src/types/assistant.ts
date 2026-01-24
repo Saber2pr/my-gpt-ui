@@ -39,6 +39,11 @@ export interface AIAssistantConfig {
    */
   initialPosition?: { x: number; y: number }
   /**
+   * The theme for the UI.
+   * @default 'light'
+   */
+  theme?: 'light' | 'dark' | (() => 'light' | 'dark')
+  /**
    * A hook to intercept and modify conversation messages before they are sent to the AI.
    * Useful for injecting system prompts, background knowledge, or filtering history.
    * 

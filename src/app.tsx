@@ -6,7 +6,8 @@ document.body.append(h1)
 
 // 默认执行初始化
 initAIAssistant({
-  locale: 'en-US'
+  locale: 'en-US',
+  theme: () => 'light'
   // welcomeMessage: '有什么可以帮忙的？',
   // suggestions: ['如何用 Typescript 实现 Helloworld？', '物联网是什么？'],
   // placeholder: '给 GPT 发送消息',

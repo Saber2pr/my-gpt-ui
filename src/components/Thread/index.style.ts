@@ -6,7 +6,8 @@ export const MessageContainer = styled.div`
   box-sizing: border-box;
   white-space: pre-wrap;
   word-break: break-word;
-  background-color: #eff6ff;
+  background-color: var(--ant-color-primary-bg, #eff6ff);
+  color: var(--ant-color-text, #333);
   border-radius: 14px;
   padding: 8px 20px;
 
@@ -20,7 +21,7 @@ export const ButtomSpace = styled(Space)`
   position: sticky;
   bottom: 0;
   padding-top: 16px;
-  background-color: #fff;
+  background-color: var(--ant-color-bg-elevated, #fff);
   padding: 0 24px;
   & > div:nth-child(2) {
     flex-grow: 1;
@@ -38,15 +39,15 @@ export const UserInput = styled(ComposerPrimitive.Input)`
   display: block;
   width: 100%;
   padding: 12px 16px;
-  background-color: #f7f7f8;
+  background-color: var(--ant-color-fill-tertiary, #f7f7f8);
   border-radius: 12px;
-  border: 1px solid #d1d5db;
+  border: 1px solid var(--ant-color-border, #d1d5db);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   outline: none;
   font-family: inherit;
   font-size: 14px;
-  color: #333;
+  color: var(--ant-color-text, #333);
   min-height: 44px;
   max-height: 200px;
   resize: none;
@@ -54,12 +55,12 @@ export const UserInput = styled(ComposerPrimitive.Input)`
   box-sizing: border-box;
 
   &:focus {
-    background-color: #fff;
-    border-color: #1890ff;
-    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.1);
+    background-color: var(--ant-color-bg-container, #fff);
+    border-color: var(--ant-color-primary, #1890ff);
+    box-shadow: 0 0 0 2px var(--ant-color-primary-hover, rgba(24, 144, 255, 0.1));
   }
 
   &::placeholder {
-    color: #bfbfbf;
+    color: var(--ant-color-text-placeholder, #bfbfbf);
   }
 `
