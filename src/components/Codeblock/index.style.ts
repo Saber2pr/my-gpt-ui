@@ -9,7 +9,7 @@ export const Contain = styled.div`
 
   pre {
     margin: 0 !important;
-    max-width: 452px;
+    width: 452px;
     overflow: auto !important;
     white-space: pre-wrap !important;
     word-break: break-all !important;
