@@ -1,6 +1,8 @@
 ### @saber2pr/ai-assistant
 
-Quickly customize your GPT UI. **100% Client-side, No Server Required.**
+Quickly customize your GPT UI.
+
+> Demo see: https://saber2pr.top/
 
 ### Installation
 
@@ -20,7 +22,8 @@ import { initAIAssistant } from '@saber2pr/ai-assistant';
 initAIAssistant({
   welcomeMessage: 'Hello! I am your AI assistant. How can I help you today?',
   suggestions: ['How to use this UI?', 'Tell me about assistant-ui'],
-  locale: 'en-US'
+  locale: 'en-US',
+  theme: () => document.body.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'
 });
 ```
 
@@ -42,6 +45,7 @@ Initializes and mounts the AI assistant. This assistant runs entirely in the bro
 | `placeholder` | `string` | - | The placeholder text for the message input box. |
 | `emptyMessage` | `string` | - | The message displayed when the thread list is empty. |
 | `locale` | `'zh-CN' \| 'en-US'` | `'zh-CN'` | The language locale for the UI. |
+| `theme` | `'light' \| 'dark' \| (() => 'light' \| 'dark')` | `'light'` | The theme for the UI. Supports a function for dynamic updates when the drawer opens. |
 | `containerId` | `string` | `'ai-assistant-root'` | The ID of the container element where the assistant will be mounted. |
 | `initialPosition` | `{ x: number; y: number }` | Bottom-right | The initial coordinates of the floating button. |
 | `onBeforeChat` | `Function` | - | A hook to intercept and modify messages before they are sent to the AI. |

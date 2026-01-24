@@ -129,10 +129,10 @@ const ThreadWelcome: FC = () => {
 const ThreadWelcomeSuggestions: FC = () => {
   const config = useContext(AIConfigContext)
   const { t, locale } = useI18n()
-  const suggestions = config.suggestions || (locale === 'zh-CN' 
+  const suggestions = config.suggestions || (locale === 'zh-CN'
     ? ["如何用 Typescript 实现 Helloworld？", "物联网是什么？"]
     : ["How to implement Helloworld in Typescript?", "What is IoT?"])
-  
+
   return (
     <Space style={{ marginTop: 24 }}>
       {suggestions.map((suggestion, index) => (
@@ -143,7 +143,7 @@ const ThreadWelcomeSuggestions: FC = () => {
           style={{ border: 'none', padding: 0 }}
           autoSend
         >
-          <Card hoverable>{suggestion}</Card>
+          <Card style={{ borderRadius: 0 }} hoverable>{suggestion}</Card>
         </ThreadPrimitive.Suggestion>
       ))}
     </Space>
