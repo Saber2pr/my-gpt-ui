@@ -32,6 +32,9 @@ const MarkdownTextImpl = (props: TextContentPartProps) => {
     <div
       style={{
         marginTop: 6,
+        maxWidth: '100%',
+        overflow: 'hidden',
+        wordBreak: 'break-word',
       }}
     >
       <MarkdownTextPrimitive

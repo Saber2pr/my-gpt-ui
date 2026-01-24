@@ -68,7 +68,7 @@ export const Thread: FC = () => {
                 <Alert
                   style={{
                     margin: '16px 0px',
-                    width: '510px',
+                    maxWidth: '100%',
                   }}
                   type="warning"
                   message="我是AI，可以回答你的问题，请在下方输入框输入你的需求～"
@@ -77,7 +77,7 @@ export const Thread: FC = () => {
             </div>
           </div>
 
-          <ButtomSpace>
+          <ButtomSpace style={{ width: '100%', boxSizing: 'border-box' }}>
             <ThreadScrollToBottom />
             <Composer />
           </ButtomSpace>
@@ -110,7 +110,7 @@ const ThreadWelcome: FC = () => {
     <ThreadPrimitive.Empty>
       <Alert
         style={{
-          width: '510px',
+          maxWidth: '100%',
         }}
         message="有什么可以帮忙的？"
       />

@@ -2,8 +2,18 @@ import styled from 'styled-components'
 
 export const Contain = styled.div`
   position: relative;
-  width: 800px;
-  overflow: auto;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  margin: 8px 0;
+
+  pre {
+    margin: 0 !important;
+    max-width: 100%;
+    overflow: auto !important;
+    white-space: pre-wrap !important;
+    word-break: break-all !important;
+  }
 
   .Paste {
     position: absolute;

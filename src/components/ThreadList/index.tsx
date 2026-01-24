@@ -7,12 +7,15 @@ import {
   ThreadListItemPrimitive,
   ThreadListPrimitive,
   useThreadListItemRuntime,
+  useAssistantRuntime,
 } from '@assistant-ui/react'
 import { Dispatcher } from '@/utils/event'
 import { EVENT_THREAD_SET_TITLE } from '@/constants'
 
+import { Empty } from 'antd'
+
 // 聊天列表
-export const ThreadList: FC = () => {
+export const ThreadList: FC<{ onItemClick?: () => void }> = ({ onItemClick }) => {
   return (
     <ThreadListPrimitive.Root
       style={{
@@ -20,8 +23,7 @@ export const ThreadList: FC = () => {
         flexDirection: 'column',
       }}
     >
-      <ThreadListNew />
-      <ThreadListItems />
+      <ThreadListItems onItemClick={onItemClick} />
     </ThreadListPrimitive.Root>
   )
 }
@@ -30,8 +32,7 @@ export const ThreadList: FC = () => {
 const ThreadListNew: FC = () => {
   return (
     <ThreadListPrimitive.New asChild>
-      <Button type="ghost">
-        <PlusOutlined />
+      <Button type="primary" icon={<PlusOutlined />} style={{ width: '100%', marginBottom: 16 }}>
         开启新对话
       </Button>
     </ThreadListPrimitive.New>
@@ -39,26 +40,52 @@ const ThreadListNew: FC = () => {
 }
 
 // 聊天列表
-const ThreadListItems: FC = () => {
-  return <ThreadListPrimitive.Items components={{ ThreadListItem }} />
+const ThreadListItems: FC<{ onItemClick?: () => void }> = ({ onItemClick }) => {
+  const runtime = useAssistantRuntime()
+  const threads = runtime.threads.getState().threads
+
+  return (
+    <>
+      <ThreadListPrimitive.Items
+        components={{
+          ThreadListItem: (props) => (
+            <ThreadListItem {...props} onClick={onItemClick} />
+          ),
+        }}
+      />
+      {threads.length === 0 && (
+        <Empty description="暂无历史对话" style={{ marginTop: 48 }} />
+      )}
+    </>
+  )
 }
 
-const ThreadListItem: FC = () => {
+const ThreadListItem: FC<{ onClick?: () => void }> = ({ onClick }) => {
   return (
     <ThreadListItemPrimitive.Root
       className="ant-btn"
-      style={{ marginTop: '16px', display: 'flex', alignItems: 'center' }}
+      style={{ 
+        marginTop: '8px', 
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'space-between',
+        width: '100%',
+        padding: '8px 12px',
+        height: 'auto'
+      }}
     >
       <ThreadListItemPrimitive.Trigger
+        onClick={onClick}
         style={{
           border: 'none',
           padding: 0,
           background: 'transparent',
-          marginRight: '20px',
-          width: '100px',
+          flex: 1,
           overflow: 'hidden',
           textOverflow: 'ellipsis',
           display: 'block',
+          textAlign: 'left',
+          cursor: 'pointer'
         }}
       >
         <ThreadListItemTitle />
