@@ -284,6 +284,7 @@ const UserActionBar: FC = () => {
 
 // 编辑上下文询问的输入框
 const EditComposer: FC = () => {
+  const { t } = useI18n()
   return (
     <ComposerPrimitive.Root
       style={{

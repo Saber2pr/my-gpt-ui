@@ -21,7 +21,7 @@ const MyApp = ({ config }: { config: AIAssistantConfig }) => {
   
   return (
     <AIConfigContext.Provider value={config}>
-      <MyAppContent open={open} setOpen={setOpen} activeTab={activeTab} setActiveTab={setActiveTab} />
+      <MyAppContent open={open} setOpen={setOpen} activeTab={activeTab} setActiveTab={setActiveTab} config={config} />
     </AIConfigContext.Provider>
   )
 }
@@ -30,12 +30,14 @@ const MyAppContent = ({
   open, 
   setOpen, 
   activeTab, 
-  setActiveTab 
+  setActiveTab,
+  config
 }: { 
   open: boolean, 
   setOpen: (open: boolean) => void,
   activeTab: string,
-  setActiveTab: (tab: string) => void
+  setActiveTab: (tab: string) => void,
+  config: AIAssistantConfig
 }) => {
   const { t } = useI18n();
   const [loadingText, setLoadingText] = useState(t('loadingModel'))
@@ -43,10 +45,52 @@ const MyAppContent = ({
   const [loading, setLoading] = useState(false)
   const [engine, setEngine] = useState<any>(null)
   
-  const [position, setPosition] = useState({ x: window.innerWidth - 100, y: window.innerHeight - 100 })
+  const defaultPos = config.initialPosition || { x: window.innerWidth - 100, y: window.innerHeight - 100 }
+  const [position, setPosition] = useState(defaultPos)
   const [isDragging, setIsDragging] = useState(false)
   const dragStartPos = React.useRef({ x: 0, y: 0 })
-  const buttonPos = React.useRef({ x: window.innerWidth - 100, y: window.innerHeight - 100 })
+  const buttonPos = React.useRef(defaultPos)
+  const lastWindowSize = React.useRef({ width: window.innerWidth, height: window.innerHeight })
+
+  // 监听窗口大小变化，修正按钮位置
+  useEffect(() => {
+    const handleResize = () => {
+      const currentWidth = window.innerWidth;
+      const currentHeight = window.innerHeight;
+      
+      setPosition(prev => {
+        // 计算按钮相对于右侧和底部的距离比例，或者简单的保持吸附状态
+        const isAtRight = prev.x > lastWindowSize.current.width / 2;
+        
+        let newX = prev.x;
+        // 如果原本在右侧，放大窗口时让它跟随右侧边缘
+        if (isAtRight) {
+          const offsetRight = lastWindowSize.current.width - prev.x;
+          newX = currentWidth - offsetRight;
+        }
+
+        // 垂直方向同理，如果靠下，保持相对底部的距离
+        const isAtBottom = prev.y > lastWindowSize.current.height / 2;
+        let newY = prev.y;
+        if (isAtBottom) {
+          const offsetBottom = lastWindowSize.current.height - prev.y;
+          newY = currentHeight - offsetBottom;
+        }
+
+        // 最终边界安全检查
+        const safeX = Math.max(20, Math.min(newX, currentWidth - 84));
+        const safeY = Math.max(20, Math.min(newY, currentHeight - 84));
+        
+        buttonPos.current = { x: safeX, y: safeY };
+        return { x: safeX, y: safeY };
+      });
+
+      lastWindowSize.current = { width: currentWidth, height: currentHeight };
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   // 当语言切换时，更新初始加载文本
   useEffect(() => {
@@ -231,7 +275,7 @@ const MyAppContent = ({
 export const initAIAssistant = (config: AIAssistantConfig = {}, container?: HTMLElement) => {
   const target = container || document.body;
   const rootDiv = document.createElement('div');
-  rootDiv.id = 'ai-assistant-root';
+  rootDiv.id = config.containerId || 'ai-assistant-root';
   target.appendChild(rootDiv);
   ReactDOM.render(<MyApp config={config} />, rootDiv);
 }
