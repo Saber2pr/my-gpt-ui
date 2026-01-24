@@ -1,6 +1,6 @@
 {
   "name": "@saber2pr/ai-assistant",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "AI Assistant",
   "files": [
     "lib"
