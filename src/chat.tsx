@@ -1,19 +1,19 @@
-import { Button, Drawer, Spin, Tabs, Progress } from 'antd';
-import React, { useState, useEffect } from 'react';
+import { Button, Drawer, Progress, Tabs } from 'antd';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 
-import { MessageOutlined, PlusOutlined, LoadingOutlined } from '@ant-design/icons';
+import { LoadingOutlined, MessageOutlined, PlusOutlined } from '@ant-design/icons';
 import { ThreadListPrimitive } from '@assistant-ui/react';
 
-import { FloatButton } from './styles';
 import { MyRuntimeProvider } from './components/MyRuntimeProvider';
 import { Thread } from './components/Thread';
 import { ThreadList } from './components/ThreadList';
-import { LLMContext } from './llm/context';
-import { getLLMengine } from './llm/engine';
-import { AIAssistantConfig } from './types/assistant';
 import { AIConfigContext } from './context';
 import { useI18n } from './hooks/useI18n';
+import { LLMContext } from './llm/context';
+import { getLLMengine } from './llm/engine';
+import { FloatButton } from './styles';
+import { AIAssistantConfig } from './types/assistant';
 
 const MyApp = ({ config }: { config: AIAssistantConfig }) => {
   const [open, setOpen] = useState(false)
@@ -195,37 +195,38 @@ const MyAppContent = ({
               </div>
             </div>
           ) : (
-            <Tabs
-              activeKey={activeTab}
-              onChange={setActiveTab}
-              style={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-              items={[
-                {
-                  key: 'chat',
-                  label: t('tabChat'),
-                  children: (
-                    <div style={{ height: 'calc(100vh - 160px)', overflow: 'hidden' }}>
-                      <Thread />
-                    </div>
-                  ),
-                },
-                {
-                  key: 'history',
-                  label: t('tabHistory'),
-                  children: (
-                    <div style={{ height: 'calc(100vh - 160px)', overflowY: 'auto', padding: '16px 0' }}>
-                      <ThreadList onItemClick={() => setActiveTab('chat')} />
-                    </div>
-                  ),
-                },
-              ]}
-            />
+            <>
+              <Tabs
+                activeKey={activeTab}
+                onChange={setActiveTab}
+                items={[
+                  { key: 'chat', label: t('tabChat') },
+                  { key: 'history', label: t('tabHistory') },
+                ]}
+              />
+              <div style={{ flex: 1, position: 'relative', overflow: 'hidden' }}>
+                <div style={{ 
+                  display: activeTab === 'chat' ? 'block' : 'none', 
+                  height: 'calc(100vh - 160px)' 
+                }}>
+                  <Thread />
+                </div>
+                <div style={{ 
+                  display: activeTab === 'history' ? 'block' : 'none', 
+                  height: 'calc(100vh - 160px)',
+                  overflowY: 'auto'
+                }}>
+                  <ThreadList onItemClick={() => setActiveTab('chat')} />
+                </div>
+              </div>
+            </>
           )}
         </Drawer>
       </MyRuntimeProvider>
     </LLMContext.Provider>
   )
 }
+
 
 export const initAIAssistant = (config: AIAssistantConfig = {}, container?: HTMLElement) => {
   const target = container || document.body;
