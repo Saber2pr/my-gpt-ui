@@ -5,6 +5,9 @@
   "files": [
     "lib"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack -w",
     "dev": "cross-env NODE_ENV=development webpack-dev-server",
