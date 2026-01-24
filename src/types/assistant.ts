@@ -1,4 +1,5 @@
 import { LocaleType } from '../i18n/locales'
+import { MLCEngine } from '@mlc-ai/web-llm'
 
 export interface ChatMessage {
   role: 'system' | 'user' | 'assistant'
@@ -21,5 +22,5 @@ export interface AIAssistantConfig {
    *   return [systemPrompt, ...messages];
    * }
    */
-  onBeforeChat?: (messages: ChatMessage[]) => ChatMessage[]
+  onBeforeChat?: (messages: ChatMessage[], llm: MLCEngine) => ChatMessage[] | Promise<ChatMessage[]>
 }

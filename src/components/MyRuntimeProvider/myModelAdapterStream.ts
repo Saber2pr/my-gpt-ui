@@ -4,7 +4,7 @@ import { Dispatcher } from '@/utils/event';
 import { EVENT_THREAD_SET_TITLE } from '@/constants';
 import { ChatMessage } from '../../types/assistant';
 
-export const MyModelAdapterStream: (llm: MLCEngine, onBeforeChat?: (messages: ChatMessage[]) => ChatMessage[]) => ChatModelAdapter = (llm, onBeforeChat) => ({
+export const MyModelAdapterStream: (llm: MLCEngine, onBeforeChat?: (messages: ChatMessage[], llm: MLCEngine) => ChatMessage[] | Promise<ChatMessage[]>) => ChatModelAdapter = (llm, onBeforeChat) => ({
   async *run({ messages, abortSignal }) {
     let chatMessages: ChatMessage[] = messages.map(item => ({
       role: item.role as ChatMessage['role'],
@@ -12,9 +12,10 @@ export const MyModelAdapterStream: (llm: MLCEngine, onBeforeChat?: (messages: Ch
     }))
 
     if (onBeforeChat) {
-      chatMessages = onBeforeChat(chatMessages)
+      chatMessages = await onBeforeChat(chatMessages, llm)
     }
  
+    console.log('🚀 ~ myModelAdapterStream ~ chatMessages:', chatMessages);
     const chunks = await llm.chat.completions.create({
       messages: chatMessages as any,
       temperature: 1,
