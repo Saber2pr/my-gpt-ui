@@ -7,7 +7,7 @@ import {
 } from '@assistant-ui/react'
 
 import { MyModelAdapterStream } from './myModelAdapterStream'
-import { useLLm } from '@/llm/context'
+import { useLLm } from '../../llm/context'
 import { AIConfigContext } from '../../context'
 
 export interface MyRuntimeProviderProps {
