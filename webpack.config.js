@@ -11,7 +11,7 @@ const publicPath = (resourcePath, context) =>
   path.relative(path.dirname(resourcePath), context) + '/'
 
 // 这里写cdn地址，如果静态资源有上传的话
-const cdn = '/my-gpt-ui'
+const cdn = '/ai-assistant'
 
 let serverProcess = null
 
