@@ -1,7 +1,7 @@
 import { ChatModelAdapter } from '@assistant-ui/react';
 import { MLCEngine } from '@mlc-ai/web-llm';
-import { Dispatcher } from '@/utils/event';
-import { EVENT_THREAD_SET_TITLE } from '@/constants';
+import { Dispatcher } from '../../utils/event';
+import { EVENT_THREAD_SET_TITLE } from '../../constants';
 import { ChatMessage } from '../../types/assistant';
 
 export const MyModelAdapterStream: (llm: MLCEngine, onBeforeChat?: (messages: ChatMessage[], llm: MLCEngine) => ChatMessage[] | Promise<ChatMessage[]>) => ChatModelAdapter = (llm, onBeforeChat) => ({

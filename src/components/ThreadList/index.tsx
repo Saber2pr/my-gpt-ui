@@ -9,8 +9,8 @@ import {
   useThreadListItemRuntime,
   useAssistantRuntime,
 } from '@assistant-ui/react'
-import { Dispatcher } from '@/utils/event'
-import { EVENT_THREAD_SET_TITLE } from '@/constants'
+import { Dispatcher } from '../../utils/event'
+import { EVENT_THREAD_SET_TITLE } from '../../constants'
 
 import { Empty } from 'antd'
 import { useI18n } from '../../hooks/useI18n'

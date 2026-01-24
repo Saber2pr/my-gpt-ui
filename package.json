@@ -15,7 +15,7 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server",
     "lint": "prettier --write ./src",
     "build": "rimraf ./build && cross-env NODE_ENV=production webpack",
-    "prepublishOnly": "yarn tsc",
+    "prepublishOnly": "rimraf ./lib && yarn tsc",
     "prepare": "husky install"
   },
   "license": "MIT",
