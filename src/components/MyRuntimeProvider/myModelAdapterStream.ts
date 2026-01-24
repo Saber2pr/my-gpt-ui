@@ -2,15 +2,21 @@ import { ChatModelAdapter } from '@assistant-ui/react';
 import { MLCEngine } from '@mlc-ai/web-llm';
 import { Dispatcher } from '@/utils/event';
 import { EVENT_THREAD_SET_TITLE } from '@/constants';
+import { ChatMessage } from '../../types/assistant';
 
-export const MyModelAdapterStream: (llm: MLCEngine) => ChatModelAdapter = llm => ({
+export const MyModelAdapterStream: (llm: MLCEngine, onBeforeChat?: (messages: ChatMessage[]) => ChatMessage[]) => ChatModelAdapter = (llm, onBeforeChat) => ({
   async *run({ messages, abortSignal }) {
+    let chatMessages: ChatMessage[] = messages.map(item => ({
+      role: item.role as ChatMessage['role'],
+      content: (item.content[0] as any).text,
+    }))
+
+    if (onBeforeChat) {
+      chatMessages = onBeforeChat(chatMessages)
+    }
  
     const chunks = await llm.chat.completions.create({
-      messages: messages.map(item => ({
-        role: item.role,
-        content: (item.content[0] as any).text,
-      })),
+      messages: chatMessages as any,
       temperature: 1,
       stream: true,
     })
@@ -51,7 +57,7 @@ export const MyModelAdapterStream: (llm: MLCEngine) => ChatModelAdapter = llm =>
           messages: [
             {
               role: 'system',
-              content: '你是一个标题生成助手。请根据用户的输入，总结出一个简短的标题（不超过10个字），不要包含标点符号。'
+              content: 'You are a title generation assistant. Please summarize a short title (no more than 10 words) based on the user\'s input, without punctuation.'
             },
             {
               role: 'user',

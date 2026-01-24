@@ -49,11 +49,14 @@ export const UserInput = styled(ComposerPrimitive.Input)`
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 16px;
   color: #333;
-  height: 32px;
+  min-height: 40px;
+  max-height: 200px;
   resize: none;
   transition: background-color 0.5s ease;
+  overflow-y: auto;
 
   &:focus {
     background-color: #fff;
+    border-color: #40a9ff;
   }
 `

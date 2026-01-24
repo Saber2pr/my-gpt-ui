@@ -30,3 +30,28 @@ export const MainContent = styled.div`
   font-size: 18px;
   color: #999;
 `
+
+export const FloatButton = styled.div`
+  position: fixed;
+  width: 64px;
+  height: 64px;
+  border-radius: 32px;
+  background-color: #1890ff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
+  z-index: 1000;
+  color: #fff;
+  font-size: 24px;
+
+  &:active {
+    cursor: grabbing;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: #40a9ff;
+  }
+`

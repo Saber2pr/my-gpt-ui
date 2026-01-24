@@ -5,8 +5,10 @@ import { MarkdownTextPrimitive } from '@assistant-ui/react-markdown'
 import { Skeleton } from 'antd'
 import { CodeBlock } from '../Codeblock'
 import { TextContentPartProps } from '@assistant-ui/react'
+import { useI18n } from '../../hooks/useI18n'
 
 const MarkdownTextImpl = (props: TextContentPartProps) => {
+  const { t } = useI18n()
   // props.status.type 可以拿到当前 ai 对话的进度、状态
   // running、complete、incomplete
   // reason: "cancelled"
@@ -23,7 +25,7 @@ const MarkdownTextImpl = (props: TextContentPartProps) => {
           height: '38px',
         }}
       >
-        思考中
+        {t('thinking')}
       </Skeleton.Node>
     )
   }

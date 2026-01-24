@@ -13,6 +13,7 @@ import { Dispatcher } from '@/utils/event'
 import { EVENT_THREAD_SET_TITLE } from '@/constants'
 
 import { Empty } from 'antd'
+import { useI18n } from '../../hooks/useI18n'
 
 // 聊天列表
 export const ThreadList: FC<{ onItemClick?: () => void }> = ({ onItemClick }) => {
@@ -30,10 +31,11 @@ export const ThreadList: FC<{ onItemClick?: () => void }> = ({ onItemClick }) =>
 
 // 点击创建新聊天
 const ThreadListNew: FC = () => {
+  const { t } = useI18n()
   return (
     <ThreadListPrimitive.New asChild>
       <Button type="primary" icon={<PlusOutlined />} style={{ width: '100%', marginBottom: 16 }}>
-        开启新对话
+        {t('newChat')}
       </Button>
     </ThreadListPrimitive.New>
   )
@@ -43,6 +45,7 @@ const ThreadListNew: FC = () => {
 const ThreadListItems: FC<{ onItemClick?: () => void }> = ({ onItemClick }) => {
   const runtime = useAssistantRuntime()
   const threads = runtime.threads.getState().threads
+  const { t } = useI18n()
 
   return (
     <>
@@ -54,7 +57,7 @@ const ThreadListItems: FC<{ onItemClick?: () => void }> = ({ onItemClick }) => {
         }}
       />
       {threads.length === 0 && (
-        <Empty description="暂无历史对话" style={{ marginTop: 48 }} />
+        <Empty description={t('noHistory')} style={{ marginTop: 48 }} />
       )}
     </>
   )
@@ -98,6 +101,7 @@ const ThreadListItem: FC<{ onClick?: () => void }> = ({ onClick }) => {
 // 点击切换聊天
 const ThreadListItemTitle: FC = () => {
   const runtime = useThreadListItemRuntime()
+  const { t } = useI18n()
   useEffect(() => {
     const handle = (event: { id: string; data: string }) => {
       const state = runtime.getState()
@@ -110,7 +114,7 @@ const ThreadListItemTitle: FC = () => {
       Dispatcher.instance.removeEventListener(EVENT_THREAD_SET_TITLE, handle)
     }
   }, [runtime])
-  return <ThreadListItemPrimitive.Title fallback={<div>新对话</div>} />
+  return <ThreadListItemPrimitive.Title fallback={<div>{t('newChatFallback')}</div>} />
 }
 
 // 归档按钮

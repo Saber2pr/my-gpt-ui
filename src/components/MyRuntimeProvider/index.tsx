@@ -8,6 +8,7 @@ import {
 
 import { MyModelAdapterStream } from './myModelAdapterStream'
 import { useLLm } from '@/llm/context'
+import { AIConfigContext } from '../../context'
 
 export interface MyRuntimeProviderProps {
   children: React.ReactNode
@@ -15,8 +16,9 @@ export interface MyRuntimeProviderProps {
 
 export function MyRuntimeProvider({ children }: MyRuntimeProviderProps) {
   const llm = useLLm()
+  const config = React.useContext(AIConfigContext)
 
-  const runtime = useLocalRuntime(MyModelAdapterStream(llm), {
+  const runtime = useLocalRuntime(MyModelAdapterStream(llm, config.onBeforeChat), {
     adapters: {
       speech: new WebSpeechSynthesisAdapter(),
     },

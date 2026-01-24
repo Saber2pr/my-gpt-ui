@@ -1,5 +1,5 @@
 import { Alert, Avatar, Button, Card, Space } from 'antd'
-import React, { FC, useEffect } from 'react'
+import React, { FC, useEffect, useContext } from 'react'
 import useSpeechToText from 'react-hook-speech-to-text'
 
 import {
@@ -33,9 +33,13 @@ import {
   MessageContainer,
   UserInput,
 } from './index.style'
+import { AIConfigContext } from '../../context'
+import { useI18n } from '../../hooks/useI18n'
 
 // 当前聊天对话上下文
 export const Thread: FC = () => {
+  const config = useContext(AIConfigContext)
+  const { t } = useI18n()
   return (
     <ThreadPrimitive.Root style={{ height: '100%' }}>
       <ThreadPrimitive.Viewport style={{ height: '100%', overflowY: 'scroll' }}>
@@ -71,7 +75,7 @@ export const Thread: FC = () => {
                     maxWidth: '100%',
                   }}
                   type="warning"
-                  message="我是AI，可以回答你的问题，请在下方输入框输入你的需求～"
+                  message={config.emptyMessage || t('defaultEmpty')}
                 />
               </ThreadPrimitive.If>
             </div>
@@ -106,13 +110,15 @@ const ThreadScrollToBottom: FC = () => {
 
 // 顶部的欢迎语
 const ThreadWelcome: FC = () => {
+  const config = useContext(AIConfigContext)
+  const { t } = useI18n()
   return (
     <ThreadPrimitive.Empty>
       <Alert
         style={{
           maxWidth: '100%',
         }}
-        message="有什么可以帮忙的？"
+        message={config.welcomeMessage || t('defaultWelcome')}
       />
       <ThreadWelcomeSuggestions />
     </ThreadPrimitive.Empty>
@@ -121,34 +127,37 @@ const ThreadWelcome: FC = () => {
 
 // 推荐的预置几个问答
 const ThreadWelcomeSuggestions: FC = () => {
+  const config = useContext(AIConfigContext)
+  const { t, locale } = useI18n()
+  const suggestions = config.suggestions || (locale === 'zh-CN' 
+    ? ["如何用 Typescript 实现 Helloworld？", "物联网是什么？"]
+    : ["How to implement Helloworld in Typescript?", "What is IoT?"])
+  
   return (
     <Space style={{ marginTop: 24 }}>
-      <ThreadPrimitive.Suggestion
-        prompt="如何用 Typescript 实现 Helloworld？"
-        method="replace"
-        style={{ border: 'none', padding: 0 }}
-        autoSend
-      >
-        <Card hoverable>如何用 Typescript 实现 Helloworld？</Card>
-      </ThreadPrimitive.Suggestion>
-      <ThreadPrimitive.Suggestion
-        prompt="物联网是什么？"
-        method="replace"
-        style={{ border: 'none', padding: 0 }}
-        autoSend
-      >
-        <Card hoverable>物联网是什么？</Card>
-      </ThreadPrimitive.Suggestion>
+      {suggestions.map((suggestion, index) => (
+        <ThreadPrimitive.Suggestion
+          key={index}
+          prompt={suggestion}
+          method="replace"
+          style={{ border: 'none', padding: 0 }}
+          autoSend
+        >
+          <Card hoverable>{suggestion}</Card>
+        </ThreadPrimitive.Suggestion>
+      ))}
     </Space>
   )
 }
 
 // 底部的输入框
 const Composer: FC = () => {
+  const config = useContext(AIConfigContext)
+  const { t } = useI18n()
   return (
     <ComposerPrimitive.Root>
       <InputSpace>
-        <UserInput rows={1} autoFocus placeholder="给 GPT 发送消息" />
+        <UserInput rows={1} autoFocus placeholder={config.placeholder || t('defaultPlaceholder')} />
         <ComposerAction />
       </InputSpace>
     </ComposerPrimitive.Root>
@@ -305,12 +314,12 @@ const EditComposer: FC = () => {
         <Space>
           <ComposerPrimitive.Cancel asChild>
             <Button type="default" size="small">
-              取消
+              {t('cancel')}
             </Button>
           </ComposerPrimitive.Cancel>
           <ComposerPrimitive.Send asChild>
             <Button type="primary" size="small">
-              发送
+              {t('send')}
             </Button>
           </ComposerPrimitive.Send>
         </Space>
