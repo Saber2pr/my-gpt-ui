@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Contain = styled.div`
   position: relative;
-  max-width: 100%;
+  width: 452px;
   overflow: hidden;
   border-radius: 8px;
   margin: 8px 0;

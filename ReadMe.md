@@ -2,7 +2,7 @@
 
 Quickly customize your GPT UI.
 
-> Demo see: https://saber2pr.top/
+> Demo see: https://saber2pr.top/ai-assistant/
 
 ### Installation
 
@@ -38,20 +38,20 @@ Initializes and mounts the AI assistant. This assistant runs entirely in the bro
 
 #### `AIAssistantConfig`
 
-| Parameter | Type | Default | Description |
-| --- | --- | --- | --- |
-| `welcomeMessage` | `string` | - | The welcome message displayed at the top of the chat. |
-| `suggestions` | `string[]` | - | A list of suggested questions to show when the chat is empty. |
-| `placeholder` | `string` | - | The placeholder text for the message input box. |
-| `emptyMessage` | `string` | - | The message displayed when the thread list is empty. |
-| `locale` | `'zh-CN' \| 'en-US'` | `'zh-CN'` | The language locale for the UI. |
-| `theme` | `'light' \| 'dark' \| (() => 'light' \| 'dark')` | `'light'` | The theme for the UI. Supports a function for dynamic updates when the drawer opens. |
-| `containerId` | `string` | `'ai-assistant-root'` | The ID of the container element where the assistant will be mounted. |
-| `initialPosition` | `{ x: number; y: number }` | Bottom-right | The initial coordinates of the floating button. |
-| `onBeforeChat` | `Function` | - | A hook to intercept and modify messages before they are sent to the AI. |
-| `maxMessages` | `number` | `20` | Maximum number of messages to keep in context. Older messages will be truncated. Set to 0 to disable. |
-| `maxContextLength` | `number` | `2500` | Maximum total characters in the context. Messages will be truncated from the oldest if exceeded. Set to 0 to disable. |
-| `maxTokens` | `number` | `3200` | Maximum estimated tokens in the context. This prevents exceeding the model's context window. For 4096 context window models, safe value is ~3200 (leaves ~900 tokens buffer). Set to 0 to disable. |
+| Parameter          | Type                                             | Default               | Description                                                                                                                                                                                        |
+| ------------------ | ------------------------------------------------ | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `containerId`      | `string`                                         | `'ai-assistant-root'` | The ID of the container element where the assistant will be mounted.                                                                                                                               |
+| `emptyMessage`     | `string`                                         | -                     | The message displayed when the thread list is empty.                                                                                                                                               |
+| `initialPosition`  | `{ x: number; y: number }`                       | Bottom-right          | The initial coordinates of the floating button.                                                                                                                                                    |
+| `locale`           | `'zh-CN' \| 'en-US'`                             | `'zh-CN'`             | The language locale for the UI.                                                                                                                                                                    |
+| `maxContextLength` | `number`                                         | `2500`                | Maximum total characters in the context. Messages will be truncated from the oldest if exceeded. Set to 0 to disable.                                                                              |
+| `maxMessages`      | `number`                                         | `20`                  | Maximum number of messages to keep in context. Older messages will be truncated. Set to 0 to disable.                                                                                              |
+| `maxTokens`        | `number`                                         | `3200`                | Maximum estimated tokens in the context. This prevents exceeding the model's context window. For 4096 context window models, safe value is ~3200 (leaves ~900 tokens buffer). Set to 0 to disable. |
+| `onBeforeChat`     | `Function`                                       | -                     | A hook to intercept and modify messages before they are sent to the AI.                                                                                                                            |
+| `placeholder`      | `string`                                         | -                     | The placeholder text for the message input box.                                                                                                                                                    |
+| `suggestions`      | `string[]`                                       | -                     | A list of suggested questions to show when the chat is empty.                                                                                                                                      |
+| `theme`            | `'light' \| 'dark' \| (() => 'light' \| 'dark')` | `'light'`             | The theme for the UI. Supports a function for dynamic updates when the drawer opens.                                                                                                               |
+| `welcomeMessage`   | `string`                                         | -                     | The welcome message displayed at the top of the chat.                                                                                                                                              |
 
 ### Local Development
 
