@@ -18,11 +18,19 @@ export function MyRuntimeProvider({ children }: MyRuntimeProviderProps) {
   const llm = useLLm()
   const config = React.useContext(AIConfigContext)
 
-  const runtime = useLocalRuntime(MyModelAdapterStream(llm, config.onBeforeChat), {
-    adapters: {
-      speech: new WebSpeechSynthesisAdapter(),
-    },
-  })
+  const runtime = useLocalRuntime(
+    MyModelAdapterStream(
+      llm,
+      config.onBeforeChat,
+      config.maxMessages,
+      config.maxContextLength
+    ),
+    {
+      adapters: {
+        speech: new WebSpeechSynthesisAdapter(),
+      },
+    }
+  )
 
   return (
     <AssistantRuntimeProvider runtime={runtime}>

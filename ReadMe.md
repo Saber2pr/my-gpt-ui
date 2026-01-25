@@ -49,6 +49,8 @@ Initializes and mounts the AI assistant. This assistant runs entirely in the bro
 | `containerId` | `string` | `'ai-assistant-root'` | The ID of the container element where the assistant will be mounted. |
 | `initialPosition` | `{ x: number; y: number }` | Bottom-right | The initial coordinates of the floating button. |
 | `onBeforeChat` | `Function` | - | A hook to intercept and modify messages before they are sent to the AI. |
+| `maxMessages` | `number` | `20` | Maximum number of messages to keep in context. Older messages will be truncated. Set to 0 to disable. |
+| `maxContextLength` | `number` | `8000` | Maximum total characters in the context. Messages will be truncated from the oldest if exceeded. Set to 0 to disable. |
 
 ### Local Development
 

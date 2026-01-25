@@ -54,4 +54,16 @@ export interface AIAssistantConfig {
    * }
    */
   onBeforeChat?: (messages: ChatMessage[], llm: MLCEngine) => ChatMessage[] | Promise<ChatMessage[]>
+  /**
+   * Maximum number of messages to keep in context. Older messages will be truncated.
+   * Set to 0 or undefined to disable truncation.
+   * @default 20
+   */
+  maxMessages?: number
+  /**
+   * Maximum total characters in the context. Messages will be truncated from the oldest if exceeded.
+   * Set to 0 or undefined to disable truncation.
+   * @default 8000
+   */
+  maxContextLength?: number
 }
