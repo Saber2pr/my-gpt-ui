@@ -283,7 +283,7 @@ const MyAppContent = ({
             </>
           )}
           <PoweredBy>
-            Powerd by <PoweredByLink href="https://github.com/Saber2pr/ai-assistant/" target="_blank" rel="noreferrer">ai-assistant</PoweredByLink>
+            Powered by <PoweredByLink href="https://github.com/Saber2pr/ai-assistant/" target="_blank" rel="noreferrer">ai-assistant</PoweredByLink>
           </PoweredBy>
         </Drawer>
       </MyRuntimeProvider>
