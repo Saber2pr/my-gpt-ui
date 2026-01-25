@@ -50,7 +50,8 @@ Initializes and mounts the AI assistant. This assistant runs entirely in the bro
 | `initialPosition` | `{ x: number; y: number }` | Bottom-right | The initial coordinates of the floating button. |
 | `onBeforeChat` | `Function` | - | A hook to intercept and modify messages before they are sent to the AI. |
 | `maxMessages` | `number` | `20` | Maximum number of messages to keep in context. Older messages will be truncated. Set to 0 to disable. |
-| `maxContextLength` | `number` | `8000` | Maximum total characters in the context. Messages will be truncated from the oldest if exceeded. Set to 0 to disable. |
+| `maxContextLength` | `number` | `2500` | Maximum total characters in the context. Messages will be truncated from the oldest if exceeded. Set to 0 to disable. |
+| `maxTokens` | `number` | `3200` | Maximum estimated tokens in the context. This prevents exceeding the model's context window. For 4096 context window models, safe value is ~3200 (leaves ~900 tokens buffer). Set to 0 to disable. |
 
 ### Local Development
 

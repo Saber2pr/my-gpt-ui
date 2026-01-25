@@ -23,7 +23,8 @@ export function MyRuntimeProvider({ children }: MyRuntimeProviderProps) {
       llm,
       config.onBeforeChat,
       config.maxMessages,
-      config.maxContextLength
+      config.maxContextLength,
+      config.maxTokens
     ),
     {
       adapters: {

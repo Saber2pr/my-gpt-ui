@@ -5,12 +5,26 @@ import { EVENT_THREAD_SET_TITLE } from '../../constants';
 import { ChatMessage } from '../../types/assistant';
 
 /**
+ * Rough estimation: 1 token ≈ 1.3-1.5 characters for English, 1.5-2 for Chinese
+ * Using 1.5 as a conservative estimate
+ */
+function estimateTokens(text: string): number {
+  // Rough estimate: Chinese characters count more, English less
+  const chineseChars = (text.match(/[\u4e00-\u9fa5]/g) || []).length;
+  const otherChars = text.length - chineseChars;
+  // Chinese: ~1.8 tokens per char, English: ~1.3 tokens per char
+  return Math.ceil(chineseChars * 1.8 + otherChars * 1.3);
+}
+
+/**
  * Truncate messages based on maxMessages and maxContextLength
+ * Also considers token estimation to avoid exceeding context window
  */
 function truncateMessages(
   messages: ChatMessage[],
   maxMessages?: number,
-  maxContextLength?: number
+  maxContextLength?: number,
+  maxTokens?: number
 ): ChatMessage[] {
   let result = [...messages];
 
@@ -85,6 +99,63 @@ function truncateMessages(
     }
   }
 
+  // Additional token-based truncation as a safety net
+  // Default to 3500 tokens (leaving ~600 tokens buffer for 4096 context window)
+  const tokenLimit = maxTokens || 3500;
+  if (tokenLimit > 0) {
+    let totalTokens = result.reduce((sum, msg) => sum + estimateTokens(msg.content), 0);
+
+    if (totalTokens > tokenLimit) {
+      const firstMessage = result[0];
+      const isSystemFirst = firstMessage.role === 'system';
+      const systemMessage = isSystemFirst ? firstMessage : null;
+      const otherMessages = isSystemFirst ? result.slice(1) : result;
+
+      // Reserve tokens for system message (max 800 tokens)
+      const systemTokens = systemMessage ? Math.min(estimateTokens(systemMessage.content), 800) : 0;
+      const availableTokens = tokenLimit - systemTokens;
+
+      // Truncate other messages
+      let truncated = [...otherMessages];
+      let currentTokens = truncated.reduce((sum, msg) => sum + estimateTokens(msg.content), 0);
+
+      // Remove oldest messages until under token limit
+      while (truncated.length > 0 && (currentTokens + systemTokens) > tokenLimit) {
+        const removed = truncated.shift();
+        if (removed) {
+          currentTokens -= estimateTokens(removed.content);
+        }
+      }
+
+      // Truncate system message if still needed
+      let finalSystemMessage = systemMessage;
+      if (systemMessage && (currentTokens + systemTokens) > tokenLimit) {
+        const maxSystemTokens = Math.max(200, tokenLimit - currentTokens - 100);
+        let systemContent = systemMessage.content;
+        let systemContentTokens = estimateTokens(systemContent);
+
+        if (systemContentTokens > maxSystemTokens) {
+          // Binary search for approximate length
+          let low = 0;
+          let high = systemContent.length;
+          while (low < high) {
+            const mid = Math.floor((low + high) / 2);
+            const testContent = systemContent.substring(0, mid);
+            if (estimateTokens(testContent) <= maxSystemTokens) {
+              low = mid + 1;
+            } else {
+              high = mid;
+            }
+          }
+          systemContent = systemContent.substring(0, Math.max(0, low - 1)) + '...';
+        }
+        finalSystemMessage = { ...systemMessage, content: systemContent };
+      }
+
+      result = finalSystemMessage ? [finalSystemMessage, ...truncated] : truncated;
+    }
+  }
+
   return result;
 }
 
@@ -92,8 +163,9 @@ export const MyModelAdapterStream: (
   llm: MLCEngine,
   onBeforeChat?: (messages: ChatMessage[], llm: MLCEngine) => ChatMessage[] | Promise<ChatMessage[]>,
   maxMessages?: number,
-  maxContextLength?: number
-) => ChatModelAdapter = (llm, onBeforeChat, maxMessages = 20, maxContextLength = 8000) => ({
+  maxContextLength?: number,
+  maxTokens?: number
+) => ChatModelAdapter = (llm, onBeforeChat, maxMessages = 20, maxContextLength = 2500, maxTokens = 3200) => ({
   async *run({ messages, abortSignal }) {
     let chatMessages: ChatMessage[] = messages.map(item => ({
       role: item.role as ChatMessage['role'],
@@ -101,10 +173,71 @@ export const MyModelAdapterStream: (
     }))
 
     // Apply truncation before onBeforeChat hook
-    chatMessages = truncateMessages(chatMessages, maxMessages, maxContextLength);
+    chatMessages = truncateMessages(chatMessages, maxMessages, maxContextLength, maxTokens);
 
     if (onBeforeChat) {
       chatMessages = await onBeforeChat(chatMessages, llm)
+      // Re-apply truncation after onBeforeChat in case it added more content
+      // Use stricter limits to ensure we don't exceed context window
+      chatMessages = truncateMessages(chatMessages, maxMessages, maxContextLength, maxTokens);
+    }
+
+    // Final safety check: ensure we're well under the token limit
+    const finalTokenLimit = maxTokens || 3200; // More conservative default
+    if (finalTokenLimit > 0) {
+      let totalTokens = chatMessages.reduce((sum, msg) => sum + estimateTokens(msg.content), 0);
+
+      if (totalTokens > finalTokenLimit) {
+        // Aggressive truncation: keep only the most recent messages
+        const firstMessage = chatMessages[0];
+        const isSystemFirst = firstMessage?.role === 'system';
+        const systemMessage = isSystemFirst ? firstMessage : null;
+        const otherMessages = isSystemFirst ? chatMessages.slice(1) : chatMessages;
+
+        // Limit system message to 500 tokens max
+        let finalSystemMessage = systemMessage;
+        if (systemMessage) {
+          const systemTokens = estimateTokens(systemMessage.content);
+          if (systemTokens > 500) {
+            // Truncate system message to ~500 tokens
+            let low = 0;
+            let high = systemMessage.content.length;
+            while (low < high) {
+              const mid = Math.floor((low + high) / 2);
+              const testContent = systemMessage.content.substring(0, mid);
+              if (estimateTokens(testContent) <= 500) {
+                low = mid + 1;
+              } else {
+                high = mid;
+              }
+            }
+            finalSystemMessage = {
+              ...systemMessage,
+              content: systemMessage.content.substring(0, Math.max(0, low - 1)) + '...'
+            };
+          }
+        }
+
+        // Keep only recent messages that fit
+        const systemTokens = finalSystemMessage ? estimateTokens(finalSystemMessage.content) : 0;
+        const availableTokens = finalTokenLimit - systemTokens;
+
+        let truncated = [];
+        let currentTokens = 0;
+        // Add messages from newest to oldest until we hit the limit
+        for (let i = otherMessages.length - 1; i >= 0; i--) {
+          const msg = otherMessages[i];
+          const msgTokens = estimateTokens(msg.content);
+          if (currentTokens + msgTokens <= availableTokens) {
+            truncated.unshift(msg);
+            currentTokens += msgTokens;
+          } else {
+            break;
+          }
+        }
+
+        chatMessages = finalSystemMessage ? [finalSystemMessage, ...truncated] : truncated;
+      }
     }
 
     const chunks = await llm.chat.completions.create({

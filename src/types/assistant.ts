@@ -62,8 +62,17 @@ export interface AIAssistantConfig {
   maxMessages?: number
   /**
    * Maximum total characters in the context. Messages will be truncated from the oldest if exceeded.
+   * Note: This is a rough estimate. Actual token count may vary. For models with 4096 context window,
+   * a safe value is around 2500-3000 characters.
    * Set to 0 or undefined to disable truncation.
-   * @default 8000
+   * @default 2500
    */
   maxContextLength?: number
+  /**
+   * Maximum estimated tokens in the context. This is a safety net to prevent exceeding model's context window.
+   * For models with 4096 context window, a safe value is around 3200 tokens (leaving ~900 tokens buffer for response and overhead).
+   * Set to 0 or undefined to disable token-based truncation.
+   * @default 3200
+   */
+  maxTokens?: number
 }
